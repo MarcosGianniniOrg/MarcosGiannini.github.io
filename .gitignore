@@ -1,0 +1,9 @@
+# Excluir todos los archivos por defecto
+*
+
+# Excluir este archivo .gitignore
+!.gitignore
+
+# Permitir la carpeta Forza
+!Forza/
+!Forza/**
