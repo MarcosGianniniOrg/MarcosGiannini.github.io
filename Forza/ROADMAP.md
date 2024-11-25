@@ -13,7 +13,6 @@
 ---
 
 ## General Objectives
-- [x] Organize repositories (`main` and `master`) with proper structure and `.gitignore` files.
 - [ ] Make daily progress in:
   - [ ] **Front-End Master**
   - [ ] **Forza Project**
@@ -29,7 +28,22 @@
 - [ ] **Module 2 (JavaScript/TypeScript):**
   - [x] Sessions completed: 1, 2, and 3.
   - [ ] Pending: Sessions 4 and 5.
-- [ ] **Next Task:** Continue exercises related to JavaScript (pending laboratory task).
+  - **Pending Exercises**:
+    - **Array Operations**:
+      - Implement `head`: extract the first element (using destructuring).
+      - Implement `tail`: return all elements except the first (using rest operator).
+      - Implement `init`: return all elements except the last.
+      - Implement `last`: return the last element.
+    - **Concat**:
+      - Concatenate two arrays (using rest/spread operators).
+      - Optional: Accept multiple arrays as input.
+    - **Clone and Merge**:
+      - Clone an object.
+      - Merge two objects (`source` overwrites `target`).
+    - **Read Books**:
+      - Check if a book is read based on a list of books.
+    - **Slot Machine**:
+      - Create a class to simulate a slot machine with random booleans.
 
 ---
 
