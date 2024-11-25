@@ -1,4 +1,3 @@
-
 # COMPLETE ROADMAP
 
 ## Table of Contents
@@ -14,6 +13,7 @@
 ---
 
 ## General Objectives
+- [x] Organize repositories (`main` and `master`) with proper structure and `.gitignore` files.
 - [ ] Make daily progress in:
   - [ ] **Front-End Master**
   - [ ] **Forza Project**
@@ -29,6 +29,7 @@
 - [ ] **Module 2 (JavaScript/TypeScript):**
   - [x] Sessions completed: 1, 2, and 3.
   - [ ] Pending: Sessions 4 and 5.
+- [ ] **Next Task:** Continue exercises related to JavaScript (pending laboratory task).
 
 ---
 
