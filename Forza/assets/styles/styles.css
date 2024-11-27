@@ -1,0 +1,195 @@
+/* Game container styles */
+#game-container {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(120deg, #a8e6cf, #ffd3b6, #ffaaa5);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* General player styles */
+#player {
+    width: 80px;
+    height: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: transparent;
+    transition: transform 0.2s ease-in-out;
+    left: 50%; /* Start in the center horizontally */
+    top: 50%; /* Start in the center vertically */
+    transform: translate(-50%, -50%);
+}
+
+/* Head */
+.head {
+    width: 50px;
+    height: 50px;
+    background: #ffe6e6;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hair */
+.hair {
+    width: 50px;
+    height: 30px;
+    background: #ff99cc;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    z-index: -1;
+}
+
+/* Coletas */
+.coleta {
+    width: 15px;
+    height: 15px;
+    background: #ff99cc;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+}
+
+.coleta.left {
+    left: -20px;
+}
+
+.coleta.right {
+    right: -20px;
+}
+
+/* Eyes */
+.eye {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+}
+
+.eye.left {
+    left: 12px;
+}
+
+.eye.right {
+    right: 12px;
+}
+
+/* Smile */
+.smile {
+    width: 20px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid #000;
+    border-top: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Torso */
+.torso {
+    width: 30px;
+    height: 50px;
+    background: #ff66ff;
+    position: relative;
+    border-radius: 10px;
+    margin-top: -5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Arms */
+.arm {
+    width: 10px;
+    height: 30px;
+    background: #ffe6e6;
+    border-radius: 5px;
+    position: absolute;
+    top: 15px;
+}
+
+.arm.left {
+    left: -25px;
+}
+
+.arm.right {
+    right: -25px;
+}
+
+/* Legs */
+.leg {
+    width: 10px;
+    height: 40px;
+    background: #ffe6e6;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+}
+
+.leg.left {
+    left: 5px;
+}
+
+.leg.right {
+    right: 5px;
+}
+
+/* Enemy styles */
+#enemy {
+    width: 60px;
+    height: 60px;
+    background-color: #444; /* Dark color */
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Bullet styles */
+.bullet {
+    width: 10px;
+    height: 5px;
+    background-color: #ff4500; /* Bullet color */
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+/* For centering the player */
+@media (max-width: 768px) {
+    #game-container {
+        width: 100%;
+        height: 100%;
+    }
+    #player {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
