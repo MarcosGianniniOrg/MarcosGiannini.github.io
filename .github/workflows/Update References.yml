@@ -21,14 +21,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install PyGithub
 
-    - name: Update references.md
+    - name: Execute update script
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "
-import base64
+        python - <<EOF
 from github import Github
 
+# Token de acceso desde los secretos
 token = '${{ secrets.GITHUB_TOKEN }}'
 repo_name = 'MarcosGiannini/MarcosGiannini.github.io'
 file_path = 'references.md'
@@ -42,5 +42,4 @@ file_content = repo.get_contents(file_path)
 new_content = file_content.decoded_content.decode() + '\\n\\n# Test update\\nThis is a test update from GitHub Actions.'
 repo.update_file(file_path, 'Automated update to references.md', new_content, file_content.sha)
 print('File updated successfully!')
-        " > script.py
-        python script.py
+EOF
