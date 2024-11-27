@@ -1,9 +1,13 @@
+
 # Excluir todos los archivos por defecto
 *
 
-# Excluir este archivo .gitignore
+# Permitir este archivo .gitignore
 !.gitignore
 
-# Permitir la carpeta Forza
+# Permitir archivos en la raíz, como references.md
+!*.md
+
+# Permitir la carpeta Forza y su contenido
 !Forza/
 !Forza/**
