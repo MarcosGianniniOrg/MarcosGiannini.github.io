@@ -45,3 +45,7 @@
 
 ### Carpeta Padre de Ambas Ramas
 - `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main`
+
+## GitHub Projects
+
+- [Roadmap y Tareas](https://github.com/users/MarcosGiannini/projects/2/views/1)
