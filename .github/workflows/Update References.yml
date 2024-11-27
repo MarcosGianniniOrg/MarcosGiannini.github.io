@@ -25,7 +25,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python -c "
+        python - <<EOF
 import base64
 from github import Github
 
@@ -42,4 +42,4 @@ file_content = repo.get_contents(file_path)
 new_content = file_content.decoded_content.decode() + '\\n\\n# Test update\\nThis is a test update from GitHub Actions.'
 repo.update_file(file_path, 'Automated update to references.md', new_content, file_content.sha)
 print('File updated successfully!')
-        "
+EOF
