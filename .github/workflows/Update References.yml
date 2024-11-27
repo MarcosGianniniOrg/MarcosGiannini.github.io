@@ -1,7 +1,7 @@
 name: Update References
 
 on:
-  workflow_dispatch: # Permite ejecutar este workflow manualmente desde GitHub
+  workflow_dispatch: # Permite ejecutar manualmente el workflow
 
 jobs:
   update-references:
@@ -14,7 +14,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x' # Usa la versión más reciente de Python
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
@@ -25,21 +25,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python - <<EOF
-import base64
-from github import Github
-
-token = '${{ secrets.GITHUB_TOKEN }}'
-repo_name = 'MarcosGiannini/MarcosGiannini.github.io'
-file_path = 'references.md'
-
-# Conectar al repositorio
-g = Github(token)
-repo = g.get_repo(repo_name)
-
-# Obtener contenido del archivo actual
-file_content = repo.get_contents(file_path)
-new_content = file_content.decoded_content.decode() + '\\n\\n# Test update\\nThis is a test update from GitHub Actions.'
-repo.update_file(file_path, 'Automated update to references.md', new_content, file_content.sha)
-print('File updated successfully!')
-EOF
+        echo 'import base64' > script.py
+        echo 'from github import Github' >> script.py
+        echo 'token = "${{ secrets.GITHUB_TOKEN }}"' >> script.py
+        echo 'repo_name = "MarcosGiannini/MarcosGiannini.github.io"' >> script.py
+        echo 'file_path = "references.md"' >> script.py
+        echo 'g = Github(token)' >> script.py
+        echo 'repo = g.get_repo(repo_name)' >> script.py
+        echo 'file_content = repo.get_contents(file_path)' >> script.py
+        echo 'new_content = file_content.decoded_content.decode() + "\\n\\n# Test update\\nThis is a test update from GitHub Actions."' >> script.py
+        echo 'repo.update_file(file_path, "Automated update to references.md", new_content, file_content.sha)' >> script.py
+        echo 'print("File updated successfully!")' >> script.py
+        python script.py
