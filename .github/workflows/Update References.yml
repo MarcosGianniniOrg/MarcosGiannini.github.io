@@ -18,6 +18,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip
         pip install PyGithub
 
     - name: Update references.md
@@ -38,7 +39,7 @@ repo = g.get_repo(repo_name)
 
 # Obtener contenido del archivo actual
 file_content = repo.get_contents(file_path)
-new_content = file_content.decoded_content.decode() + '\n\n# Test update\nThis is a test update from GitHub Actions.'
+new_content = file_content.decoded_content.decode() + '\\n\\n# Test update\\nThis is a test update from GitHub Actions.'
 repo.update_file(file_path, 'Automated update to references.md', new_content, file_content.sha)
 print('File updated successfully!')
         "
