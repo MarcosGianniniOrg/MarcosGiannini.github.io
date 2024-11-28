@@ -1,71 +1,73 @@
-# References
+# Referencias y Recursos
 
-Este archivo contiene una lista de recursos útiles organizados por categorías para facilitar su acceso y uso.
+## Rama Main (Proyectos Personales)
+- [Repositorio principal](https://github.com/MarcosGiannini/MarcosGiannini.github.io)
+- [Proyecto Forza](https://github.com/MarcosGiannini/MarcosGiannini.github.io/tree/main/Forza)
+- [Archivo de Referencias](https://github.com/MarcosGiannini/MarcosGiannini.github.io/blob/main/references.md)
+- [Roadmap del Proyecto Forza](https://github.com/MarcosGiannini/MarcosGiannini.github.io/blob/main/Forza/ROADMAP.md)
 
----
-
-## 📚 **Documentación Oficial**
-- [MDN Web Docs](https://developer.mozilla.org/en/)  
-  Documentación oficial y ejemplos para desarrolladores web (HTML, CSS, JavaScript, APIs).
-
-- [React Documentation](https://reactjs.org/docs/getting-started.html)  
-  Guía oficial de React, con secciones para principiantes y avanzados.
-
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)  
-  Guía oficial para aprender y usar Tailwind CSS.
-
----
-
-## 📖 **Tutoriales y Guías**
-- [freeCodeCamp](https://www.freecodecamp.org/)  
-  Plataforma gratuita para aprender programación desde lo básico hasta temas avanzados.
-
-- [Egghead.io](https://egghead.io/)  
-  Cursos cortos sobre JavaScript, React y más temas de desarrollo web.
-
-- [CSS Tricks](https://css-tricks.com/)  
-  Recursos, tutoriales y ejemplos prácticos para mejorar tus habilidades con CSS.
+## Rama Master (Trabajos Master y Pruebas)
+- [Repositorio principal de pruebas](https://github.com/MarcosGiannini/miprueba)
+- [Apuntes y ejercicios del máster](https://github.com/MarcosGiannini/miprueba/tree/master/Apuntes%20y%20ejercicios%20del%20master)
+  - [Entregas](https://github.com/MarcosGiannini/miprueba/tree/master/Apuntes%20y%20ejercicios%20del%20master/Entregas)
+    - [Laboratorio Avanzado](https://github.com/MarcosGiannini/miprueba/tree/master/Apuntes%20y%20ejercicios%20del%20master/Entregas/Master%20Front%20End%20XVII%20-%20Modulo%201%20-%20Layout%20-%20Laboratorio%20Avanzado)
+    - [Laboratorio Básico](https://github.com/MarcosGiannini/miprueba/tree/master/Apuntes%20y%20ejercicios%20del%20master/Entregas/Master%20Front%20End%20XVII%20-%20Modulo%201%20-%20Layout%20-%20Laboratorio%20B%C3%A1sico)
+    - [Laboratorio Extra](https://github.com/MarcosGiannini/miprueba/tree/master/Apuntes%20y%20ejercicios%20del%20master/Entregas/Master%20Front%20End%20XVII%20-%20Modulo%201%20-%20Layout%20-%20Laboratorio%20Extra)
+  - [Pruebas](https://github.com/MarcosGiannini/miprueba/tree/master/Apuntes%20y%20ejercicios%20del%20master/Pruebas)
+  - [Unidad 1 - Layout](https://github.com/MarcosGiannini/miprueba/tree/master/Apuntes%20y%20ejercicios%20del%20master/Unidad%201%20-%20Layout)
 
 ---
 
-## 🔧 **Herramientas y Recursos**
-- [CodeSandbox](https://codesandbox.io/)  
-  Entorno online para desarrollar y compartir proyectos rápidamente.
+## Rutas Locales
 
-- [Figma](https://www.figma.com/)  
-  Herramienta de diseño colaborativo para interfaces y prototipos.
+### Rama Main (Proyectos Personales)
 
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse)  
-  Herramienta para evaluar el rendimiento y la accesibilidad de tus proyectos web.
+**PC Personal**
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io\Forza`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io\Forza\src`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io\Forza\assets`
 
----
-
-## 💬 **Comunidades y Foros**
-- [Stack Overflow](https://stackoverflow.com/)  
-  Comunidad de desarrolladores para resolver dudas técnicas.
-
-- [Dev.to](https://dev.to/)  
-  Comunidad de desarrolladores que comparten artículos y experiencias.
-
-- [Reddit - r/webdev](https://www.reddit.com/r/webdev/)  
-  Discusiones y recursos para desarrolladores web.
+**PC Trabajo**
+- `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\MarcosGiannini.github.io`
+- `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\MarcosGiannini.github.io\Forza`
+- `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\MarcosGiannini.github.io\Forza\assets`
+- `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\MarcosGiannini.github.io\Forza\src`
 
 ---
 
-## 🗓 **Otros Recursos Útiles**
-- [Google Fonts](https://fonts.google.com/)  
-  Biblioteca gratuita de tipografías para tus proyectos.
+### Rama Master (Trabajos Master y Pruebas)
 
-- [Unsplash](https://unsplash.com/)  
-  Imágenes libres de uso para mejorar el diseño visual de tus aplicaciones.
+**PC Personal**
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\miprueba`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\miprueba\Apuntes y ejercicios del master`
+  - `\Entregas`
+  - `\Pruebas`
 
-- [Can I Use](https://caniuse.com/)  
-  Compatibilidad de tecnologías web con distintos navegadores.
+**PC Trabajo**
+- `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\miprueba`
+- `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\miprueba\Apuntes y ejercicios del master`
+  - `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\miprueba\Apuntes y ejercicios del master\Unidad 1 - Layout`
+  - `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\miprueba\Apuntes y ejercicios del master\Unidad 2 - Lenguaje`
 
 ---
 
-## 🛠 **Contribuciones**
-¿Tienes recursos adicionales que puedan ser útiles? ¡No dudes en abrir un Pull Request o sugerir cambios!
+### Carpeta Padre de Ambas Ramas
+**PC Personal**: `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main`  
+**PC Trabajo**: `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend`
 
 ---
 
+## GitHub Projects
+
+- [Roadmap y Tareas](https://github.com/users/MarcosGiannini/projects/2)
+- [Archivo de Referencias](https://github.com/MarcosGiannini/MarcosGiannini.github.io/blob/main/references.md)
+- [Roadmap del Proyecto Forza](https://github.com/MarcosGiannini/MarcosGiannini.github.io/blob/main/Forza/ROADMAP.md)
+
+---
+
+### Notas Adicionales
+- Considerar mantener las carpetas padre idénticas en ambos equipos para evitar conflictos.
+- Alias sugeridos para facilitar el acceso:
+  - **Git Bash** o **PowerShell**: Configurar rutas de acceso directo.
+  - Documentar cómo usar alias en terminal en una futura sección de este archivo.
