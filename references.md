@@ -23,10 +23,10 @@
 ### Rama Main (Proyectos Personales)
 
 **PC Personal**
-- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io`
-- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io\Forza`
-- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io\Forza\src`
-- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\MarcosGiannini.github.io\Forza\assets`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\MarcosGiannini.github.io`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\MarcosGiannini.github.io\Forza`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\MarcosGiannini.github.io\Forza\src`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\MarcosGiannini.github.io\Forza\assets\styles`
 
 **PC Trabajo**
 - `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend\MarcosGiannini.github.io`
@@ -39,8 +39,8 @@
 ### Rama Master (Trabajos Master y Pruebas)
 
 **PC Personal**
-- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\miprueba`
-- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main\miprueba\Apuntes y ejercicios del master`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\miprueba`
+- `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\miprueba\Apuntes y ejercicios del master`
   - `\Entregas`
   - `\Pruebas`
 
@@ -53,7 +53,7 @@
 ---
 
 ### Carpeta Padre de Ambas Ramas
-**PC Personal**: `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode\bootcamp-js-2-main`  
+**PC Personal**: `C:\Users\marco\OneDrive\Escritorio\Master FrontEnd LemonCode`  
 **PC Trabajo**: `C:\Users\jmgiannini\Desktop\Master Lemoncode Frontend`
 
 ---
@@ -67,7 +67,7 @@
 ---
 
 ### Notas Adicionales
-- Considerar mantener las carpetas padre idénticas en ambos equipos para evitar conflictos.
-- Alias sugeridos para facilitar el acceso:
-  - **Git Bash** o **PowerShell**: Configurar rutas de acceso directo.
-  - Documentar cómo usar alias en terminal en una futura sección de este archivo.
+- Mantener las carpetas padre similares en ambos equipos para evitar confusiones.
+- **Alias sugeridos**:
+  - Crear accesos directos en terminal para rutas locales frecuentes.
+  - Incluir un apartado en este archivo con instrucciones para configurar alias.
