@@ -1,13 +1,52 @@
+# Node.js dependencies
+node_modules/
 
-# Excluir todos los archivos por defecto
-*
+# Build outputs
+dist/
+build/
 
-# Permitir este archivo .gitignore
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and debugging files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Git-specific
+*.lock
+*.bak
+*.orig
+
+# Exclude compiled files
+*.out
+*.pyc
+*.class
+
+# Ignore everything in this folder
+# Allow Forza and Portfolio
 !.gitignore
+Forza/
+Portfolio/
 
-# Permitir archivos en la raíz, como references.md
+# Markdown and documentation
 !*.md
-
-# Permitir la carpeta Forza y su contenido
-!Forza/
-!Forza/**
