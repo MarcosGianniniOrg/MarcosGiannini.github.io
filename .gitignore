@@ -42,11 +42,12 @@ coverage/
 *.pyc
 *.class
 
-# Ignore everything in this folder
-# Allow Forza and Portfolio
-!.gitignore
-Forza/
-Portfolio/
+# Include specific folders and subfolders
+!Forza/
+!Forza/**
+
+!Portfolio/
+!Portfolio/**
 
 # Markdown and documentation
 !*.md
