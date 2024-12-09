@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple product tracker dashboard to manage and display product details.">
+    <title>Product Tracker Dashboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Tracker Dashboard</h1>
+    </header>
+    <main>
+        <!-- Form to add products -->
+        <form aria-label="Product submission form">
+            <!-- Field for product name -->
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" placeholder="Enter product name" required aria-label="Enter the product name">
+            
+            <!-- Field for product number -->
+            <label for="productNumber">Product Number:</label>
+            <input type="number" id="productNumber" placeholder="Enter product number" required aria-label="Enter the product number">
+            
+            <!-- Button to add the product -->
+            <button type="submit" aria-label="Add product to the list">Add Product</button>
+        </form>
+        
+        <!-- Counter for total products -->
+        <p id="product-counter" aria-live="polite" role="status">Total Products: 0</p>
+        
+        <!-- Container to render the products -->
+        <section class="product-list" role="list" aria-label="Product list">
+            <!-- Product cards will be dynamically inserted here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Product Tracker. All Rights Reserved.</p>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
