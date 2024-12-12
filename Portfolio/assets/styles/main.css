@@ -1,0 +1,112 @@
+header {
+  background-color: #f4a6c1;
+  padding: 1rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo a {
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+header nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+header nav .nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
+header nav .nav-links li a:hover {
+  color: #d14c7d;
+}
+
+#hero {
+  background-color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+#hero h1 {
+  font-size: 2.5rem;
+  color: #f4a6c1;
+}
+#hero p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+#hero .cta-button {
+  display: inline-block;
+  background-color: #f4a6c1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+#hero .cta-button:hover {
+  background-color: #d14c7d;
+}
+
+#projects {
+  padding: 1rem;
+  background-color: #fef6fa;
+}
+#projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f4a6c1;
+}
+#projects .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+#projects .projects-container .project-card {
+  background-color: white;
+  border: 1px solid #f4a6c1;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#projects .projects-container .project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+#projects .projects-container .project-card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #f4a6c1;
+}
+#projects .projects-container .project-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+#projects .projects-container .project-card .project-link {
+  display: inline-block;
+  background-color: #f4a6c1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+#projects .projects-container .project-card .project-link:hover {
+  background-color: #d14c7d;
+}
+#projects .projects-container .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=main.css.map */

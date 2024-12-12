@@ -1,0 +1,33 @@
+@use "../variables" as *;
+
+#hero {
+  background-color: $background-color;
+  text-align: center;
+  padding: 4rem 1rem;
+
+  h1 {
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $text-color;
+    margin: $margin auto;
+    max-width: 600px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: $primary-color;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: $margin;
+
+    &:hover {
+      background-color: $link-hover-color;
+    }
+  }
+}

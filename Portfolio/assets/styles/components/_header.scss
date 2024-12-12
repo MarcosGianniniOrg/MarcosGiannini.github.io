@@ -1,0 +1,35 @@
+@use "../variables" as *;
+
+header {
+    background-color: $primary-color;
+    padding: $padding;
+  
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .logo a {
+        color: $text-color;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+  
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+  
+        li a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 1rem;
+  
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+  

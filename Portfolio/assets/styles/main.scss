@@ -1,0 +1,12 @@
+// Import global variables
+@use "variables" as *;
+
+// Import component styles
+@use "components/header";
+@use "components/hero";
+@use "components/projects";
+@use "components/about";
+@use "components/contact";
+
+// Import responsive styles
+@use "responsive";

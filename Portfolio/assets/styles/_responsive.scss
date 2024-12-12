@@ -1,0 +1,44 @@
+@use './variables' as *;
+
+@mixin responsive-styles {
+  // Ejemplo de media queries para diseño responsivo
+  @media (max-width: 1024px) {
+    body {
+      font-size: 90%;
+    }
+
+    header nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 85%;
+    }
+
+    header {
+      padding: $padding-small;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      font-size: 80%;
+    }
+
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .project-card {
+      font-size: 0.9rem;
+    }
+  }
+}
