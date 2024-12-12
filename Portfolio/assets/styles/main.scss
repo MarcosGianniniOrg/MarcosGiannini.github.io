@@ -1,12 +1,13 @@
 // Import global variables
-@use "variables" as *;
+@use "./variables" as *;
 
 // Import component styles
-@use "components/header";
-@use "components/hero";
-@use "components/projects";
-@use "components/about";
-@use "components/contact";
+@use "./components/header";
+@use "./components/hero";
+@use "./components/projects";
+@use "./components/about";
+@use "./components/contact";
+@use "./components/footer";
 
 // Import responsive styles
-@use "responsive";
+@use "./responsive";

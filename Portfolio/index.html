@@ -8,6 +8,7 @@
     <meta name="author" content="Marcos Giannini">
     <title>Portfolio Marcos Giannini</title>
     <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -21,81 +22,151 @@
             <li><a href="#contact" aria-label="Go to Contact Section">Contact</a></li>
           </ul>
         </nav>
-      </header>
-      <section id="hero">
-      <div class="hero-content">
-        <h1>Hi, I'm Marcos Giannini</h1>
-        <p>
-          A passionate Front-End Developer focused on building beautiful and functional user interfaces.
-        </p>
-        <a href="#projects" class="cta-button" aria-label="See My Projects">View My Work</a>
-      </div>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <img src="assets/images/age_calculator.png" alt="Screenshot of Age Calculator App">
-            <h3>Age Calculator</h3>
-            <p>A simple app to calculate your exact age based on your date of birth.</p>
-            <a href="https://your-deployment-url-for-age-calculator.com" target="_blank" class="project-link" aria-label="View Age Calculator Application">View Application</a>
-            <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Portfolio/Age_Calculator" target="_blank" class="project-link" aria-label="View Age Calculator on GitHub">View on GitHub</a>
+    </header>
+    <main>
+        <section id="hero">
+          <div class="hero-content">
+            <h1>Hi, I'm Marcos Giannini</h1>
+            <p>
+              A passionate Front-End Developer focused on building beautiful and functional user interfaces.
+            </p>
+            <a href="#projects" class="cta-button" aria-label="See My Projects">View My Work</a>
           </div>
-    
-          <!-- Project 2 -->
-          <div class="project-card">
-            <img src="assets/images/product_tracker.png" alt="Screenshot of Product Tracker App">
-            <h3>Product Tracker</h3>
-            <p>An app to track and manage product inventories dynamically.</p>
-            <a href="https://your-deployment-url-for-product-tracker.com" target="_blank" class="project-link" aria-label="View Product Tracker Application">View Application</a>
-            <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Portfolio/Product_Tracker" target="_blank" class="project-link" aria-label="View Product Tracker on GitHub">View on GitHub</a>
+        </section>
+        <section id="projects">
+          <h2>My Projects</h2>
+          <div class="projects-container">
+              <div class="project-card">
+                  <img src="assets/images/age_calculator.png" alt="Screenshot of Age Calculator App">
+                  <h3>Age Calculator</h3>
+                  <p>A simple app to calculate your exact age based on your date of birth.</p>
+                  <div class="project-links">
+                      <a href="https://marcosgiannini.github.io/Age_Calculator/" target="_blank" class="project-link" aria-label="View Age Calculator Live">View App</a>
+                      <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Portfolio/Age_Calculator" target="_blank" class="project-link" aria-label="View Age Calculator on GitHub">View on GitHub</a>
+                  </div>
+              </div>
+              <div class="project-card">
+                  <img src="assets/images/product_tracker.png" alt="Screenshot of Product Tracker App">
+                  <h3>Product Tracker</h3>
+                  <p>An app to track and manage product inventories dynamically.</p>
+                  <div class="project-links">
+                      <a href="https://marcosgiannini.github.io/Product_Tracker/" target="_blank" class="project-link" aria-label="View Product Tracker Live">View App</a>
+                      <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Portfolio/Product_Tracker" target="_blank" class="project-link" aria-label="View Product Tracker on GitHub">View on GitHub</a>
+                  </div>
+              </div>
+              <div class="project-card">
+                <img src="assets/images/forza_preview.png" alt="Screenshot of Forza Game">
+                <h3>Forza (Coming Soon)</h3>
+                <p>A top-down 2D arcade-style game built using HTML5 Canvas.</p>
+                <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Forza" 
+                   target="_blank" 
+                   class="development-link" 
+                   aria-label="Project in Development">Project in Development</a>
+              </div>                        
           </div>
-    
-          <!-- Placeholder for future projects -->
-          <div class="project-card">
-            <img src="assets/images/forza_preview.png" alt="Screenshot of Forza App">
-            <h3>Forza (Coming Soon)</h3>
-            <p>A top-down 2D arcade-style game built using HTML5 Canvas.</p>
-            <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Forza" target="_blank" class="project-link" aria-label="Project in Development">Project in Development</a>
+        </section>
+        <section id="about">
+          <h2>About Me</h2>
+          <div class="about-container">
+            <img src="assets/images/profile.png" alt="Profile Picture of Marcos Giannini" class="about-image" />
+            <div class="about-text">
+              <p>
+                Hello! I'm Marcos Giannini, a passionate Front-End Developer focused on creating visually stunning and functional web applications. 
+                I specialize in HTML, CSS, JavaScript, and SCSS, with a deep love for solving problems and creating intuitive user experiences.
+              </p>
+              <div class="skills-list">
+                <!-- Tarjetas de habilidades -->
+                <div class="skill-card">
+                  <i class="fab fa-html5"></i>
+                  <p>HTML5 & CSS3</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fab fa-js-square"></i>
+                  <p>JavaScript (ES6+)</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-mobile-alt"></i>
+                  <p>SCSS & Responsive Design</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fab fa-git-alt"></i>
+                  <p>Git & GitHub</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-universal-access"></i>
+                  <p>Basic SEO & Accessibility</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-users"></i>
+                  <p>Team Leadership</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-lightbulb"></i>
+                  <p>Problem Solving</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-project-diagram"></i>
+                  <p>Project Planning</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-    </section>
-      <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-          <img src="assets/images/profile.png" alt="Profile Picture of Marcos Giannini">
-          <p>
-            Hello! I'm Marcos Giannini, a passionate Front-End Developer focused on creating visually stunning and functional web applications. I love solving problems and constantly improving my skills.
-          </p>
-        </div>
-      </section>
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-          <form action="https://formspree.io/f/meoqwvjq" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-      
-            <label for="email">Email</label>
-            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
-      
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-      
-            <button type="submit">Send Message</button>
-          </form>
-      
-          <div class="contact-info">
-            <p>Or reach out via:</p>
-            <ul>
-              <li>Email: <a href="mailto:marcogfa@gmail.com">marcogfa@gmail.com</a></li>
-              <li>GitHub: <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main" target="_blank">MarcosGiannini</a></li>
-              <li>LinkedIn: <a href="https://www.linkedin.com/in/marcosgiannini85/" target="_blank">Marcos Giannini</a></li>
+          
+        </section>
+              
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <div class="contact-container">
+              <form action="https://formspree.io/f/meoqwvjq" method="POST">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name" required>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                  <button type="submit">Send Message</button>
+              </form>
+              <div class="contact-info">
+                  <p>You can also reach me via:</p>
+                  <ul>
+                      <li>
+                          <i class="fas fa-envelope"></i>
+                          <a href="mailto:marcogfa@gmail.com">marcogfa@gmail.com</a>
+                      </li>
+                      <li>
+                          <i class="fab fa-github"></i>
+                          <a href="https://github.com/MarcosGianniniOrg" target="_blank">MarcosGiannini</a>
+                      </li>
+                      <li>
+                          <i class="fab fa-linkedin"></i>
+                          <a href="https://www.linkedin.com/in/marcosgiannini85/" target="_blank">Marcos Giannini</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <p>© 2024 Marcos Giannini. All rights reserved.</p>
+            <ul class="footer-links">
+                <li>
+                    <a href="https://github.com/MarcosGianniniOrg" target="_blank" aria-label="Visit my GitHub profile">
+                      <i class="fab fa-github"></i> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/marcosgiannini85/" target="_blank" aria-label="Visit my LinkedIn profile">
+                      <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="#hero" aria-label="Back to top">
+                      <i class="fas fa-arrow-up"></i> Back to Top
+                    </a>
+                </li>
             </ul>
-          </div>
         </div>
-      </section>
-      
+    </footer>
 </body>
 </html>

@@ -1,0 +1,143 @@
+@use "../variables" as *;
+
+#about {
+  padding: 2rem 0;
+  background: linear-gradient(to top, #ffe6f0, #fff);
+
+  h2 {
+    color: $primary-color;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center; // Centra todo horizontalmente
+    flex-wrap: wrap;
+
+    .about-image {
+      flex-shrink: 0;
+      width: 180px; // Foto un poco más grande
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      flex-grow: 1;
+      max-width: 700px;
+      text-align: center;
+      margin-top: 1rem; // Reduce espacio entre imagen y texto
+
+      p {
+        line-height: 1.6;
+        font-size: 1rem;
+        color: $text-color;
+        margin: 0 auto;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; // Centra las tarjetas
+        gap: 1rem;
+        margin-top: 1.5rem; // Reduce margen superior
+
+        .skill-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 130px;
+          height: 130px;
+          background-color: white;
+          border: 1px solid $primary-color;
+          border-radius: 15px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+          }
+
+          i {
+            font-size: 1.8rem;
+            color: $primary-color;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .about-image {
+        margin-bottom: 1rem;
+      }
+
+      .about-text {
+        max-width: 90%;
+
+        .skills-list {
+          gap: 0.8rem;
+
+          .skill-card {
+            width: 110px;
+            height: 110px;
+
+            i {
+              font-size: 1.5rem;
+            }
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-text {
+      .skills-list {
+        display: grid; // Cambia de flex a grid
+        grid-template-columns: repeat(2, 1fr); // Dos columnas
+        gap: 0.8rem; // Ajusta el espaciado entre tarjetas
+        justify-items: center; // Centra las tarjetas dentro de cada celda
+
+        .skill-card {
+          width: 120px;
+          height: 120px;
+
+          i {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

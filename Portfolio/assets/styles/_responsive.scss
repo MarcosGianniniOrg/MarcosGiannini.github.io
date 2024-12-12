@@ -1,44 +1,82 @@
-@use './variables' as *;
+@use "./variables" as *;
 
-@mixin responsive-styles {
-  // Ejemplo de media queries para diseño responsivo
-  @media (max-width: 1024px) {
-    body {
-      font-size: 90%;
-    }
+/* Móviles pequeños (máx. 480px) */
+@media (max-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: column; // Cambiar orientación a vertical
+    align-items: center;
+    padding: $padding;
 
-    header nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  @media (max-width: 768px) {
-    body {
-      font-size: 85%;
-    }
-
-    header {
-      padding: $padding-small;
+    .logo {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.8rem; // Tamaño de fuente más grande para móviles
     }
 
     .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
+      display: flex;
+      flex-direction: column; // Navegación en columna
+      gap: 1.5rem; // Espaciado entre los enlaces
+
+      a {
+        font-size: 1.2rem; // Aumentar el tamaño de la fuente
+        text-decoration: none; // Eliminar subrayado por defecto
+        color: $text-color; // Color base para los enlaces
+        padding: 0.5rem; // Añadir padding para mejorar la accesibilidad
+        border-radius: 5px; // Bordes suaves para los enlaces
+        transition: all 0.3s ease; // Suavizar los efectos visuales
+
+        &:hover {
+          background-color: $link-hover-color; // Fondo al pasar el cursor
+          color: white; // Cambiar el color del texto
+        }
+      }
     }
   }
 
-  @media (max-width: 480px) {
-    body {
-      font-size: 80%;
+  #hero {
+    text-align: center;
+    padding: 2rem 1rem; // Ajustar los márgenes internos para móviles
+
+    h1 {
+      font-size: 1.8rem; // Reducir el tamaño del título
+      margin-bottom: 1rem;
     }
 
-    .hero-content h1 {
-      font-size: 1.5rem;
+    p {
+      font-size: 1rem; // Reducir el tamaño del texto descriptivo
+      margin-bottom: 1.5rem;
     }
 
-    .project-card {
-      font-size: 0.9rem;
+    .cta-button {
+      padding: 0.75rem 1.5rem; // Botón más grande y accesible
+      font-size: 1rem; // Ajustar la fuente del botón
+    }
+  }
+}
+
+/* Tablets (máx. 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+
+    .nav-links {
+      gap: 1.5rem; // Espaciado mayor entre enlaces
+    }
+  }
+
+  #projects .projects-container {
+    grid-template-columns: 1fr; // Mostrar proyectos en una columna
+    gap: 2rem;
+  }
+
+  #about .about-container {
+    flex-direction: column; // Cambiar alineación a vertical
+    text-align: center;
+
+    img {
+      margin-bottom: 1rem;
     }
   }
 }

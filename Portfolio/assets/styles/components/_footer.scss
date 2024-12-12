@@ -1,0 +1,51 @@
+@use "../variables" as *;
+
+#footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+
+  .footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease; // Suavizar el hover
+          }
+
+          &:hover {
+            color: $link-hover-color;
+            i {
+              transform: scale(1.2); // Agranda el icono al pasar el mouse
+            }
+          }
+        }
+      }
+    }
+  }
+
+  margin-top: 2rem; // Añade espacio superior para separarlo de la sección anterior
+}
