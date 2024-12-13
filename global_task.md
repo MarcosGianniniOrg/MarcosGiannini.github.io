@@ -33,18 +33,26 @@
      - [✅] Contact (formulario o enlaces con iconos interactivos).
        - [✅] Efecto hover en iconos y enlaces.
      - [✅] Footer (derechos reservados, enlaces adicionales).
+
 2. **SCSS:**
    - [✅] Diseñar estilos iniciales:
      - [✅] Variables globales (`_variables.scss`).
      - [✅] Componentes base (`header.scss`, `hero.scss`, `projects.scss`, `about.scss`, `contact.scss`, `footer.scss`).
      - [✅] Media queries en un único archivo (`_responsive.scss`).
      - [✅] Ajustar tamaños y márgenes para un mejor balance visual.
-3. **JS:**
-   - [❌] Añadir interactividad básica (scroll suave, validaciones del formulario, etc.).
+     - [❌] **Mejorar tipografía:** Cambiar a una fuente moderna y profesional (Google Fonts como `Poppins`, `Montserrat`, `Lato`).
+
+3. **JavaScript:**
+   - [❌] Añadir interactividad básica:
+     - [❌] **Scroll suave:** Navegación fluida al hacer clic en enlaces internos.
+     - [❌] **Validación de formulario:** Validación básica para el formulario de contacto.
+     - [❌] **Animaciones de scroll:** Aplicar animaciones suaves en elementos que aparezcan al hacer scroll.
+
 4. **Responsive Design:**
-   - [✅] Ajustar diseño para móviles y tablets.
+   - [✅] Ajustar diseño para móviles y tablets:
      - [✅] Animaciones y hover en tarjetas ajustadas a pantallas pequeñas.
      - [✅] Diseño finalizado para "About Me" en todas las resoluciones.
+
 5. **Documentación:**
    - [❌] Escribir un `README.md` inicial explicando el propósito del portfolio.
    - [❌] Revisar comentarios en inglés profesionales de cada uno de los apartados.
@@ -56,9 +64,11 @@
 1. **Pruebas de Habilidades:**
    - [❌] Resolver ejercicios técnicos semanalmente en plataformas como HackerRank o Codewars.
    - [❌] Realizar mini-proyectos en inglés (ejemplo: Age Calculator, Product Tracker).
+
 2. **Simular Entrevistas:**
    - [❌] Practicar una entrevista técnica semanal (preguntas de JS, CSS, HTML).
    - [❌] Preparar preguntas frecuentes en inglés.
+
 3. **Actualizar CV y LinkedIn:**
    - [❌] Incluir proyectos destacados (Age Calculator, Product Tracker, Portfolio).
    - [❌] Añadir habilidades relevantes como JavaScript, SCSS, Git.
@@ -69,8 +79,10 @@
 ## **Máster**
 1. **Clases Diferidas:**
    - [❌] Organizar horarios para ver sesiones pendientes.
+
 2. **Entregas Pendientes:**
    - [❌] Completar trabajos y subirlos al repositorio.
+
 3. **Consolidar Conocimientos:**
    - [❌] Revisar temas clave (JavaScript avanzado, Tailwind, Bundling).
 
@@ -81,6 +93,7 @@
    - [❌] Configurar proyecto con `Vite` o `Webpack`.
    - [❌] Implementar soporte para SCSS.
    - [❌] Configurar linters (`ESLint` y `Prettier`).
+
 2. **Desarrollo del Juego:**
    - [❌] Crear estructura básica del juego en Canvas.
    - [❌] Implementar sistema de movimiento del jugador.
@@ -103,5 +116,9 @@
    - **Responsive Design:** Ajustar diseño para móviles y tablets.
      - [✅] Mejorar animaciones y hover en tarjetas responsive.
    - **Footer:** Revisar ajustes de hover y balance visual.
-2. Luego seguimos con **JS para interactividad básica**.
-3. Mientras avanzamos, empezaremos a preparar pruebas técnicas e inglés semanalmente.
+
+2. **JavaScript para Interactividad Básica:**
+   - [❌] Implementar scroll suave y validación de formularios.
+
+3. **Evaluaciones y Pruebas Técnicas:**
+   - **Preparar pruebas técnicas e inglés semanalmente.**

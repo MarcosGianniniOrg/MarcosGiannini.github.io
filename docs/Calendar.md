@@ -34,7 +34,7 @@ Proporcionar una visión clara y estructurada del plan del máster, ayudándote 
 |                   | Clase extra de JavaScript/TypeScript     | 3         | 27/11/2024            | ✅            |
 |                   | JavaScript/TypeScript ADVANCED           | 3         | 28/11/2024            | ✅            |
 | **Bundling**      | Conceptos + Webpack (I)                  | 3         | 29/11/2024            | ✅            |
-|                   | Webpack (II)                             | 3         | 12/12/2024            | ❌            |
+|                   | Webpack (II)                             | 3         | 12/12/2024            | ✅            |
 |                   | Vite                                     | 3         | 18/12/2024            | ❌            |
 |                   | Sesión librería Vite                     | 3         | 19/12/2024            | ❌            |
 |                   | Laboratorio Módulo Bundling              | 3         | 10/01/2025            | ❌            |
