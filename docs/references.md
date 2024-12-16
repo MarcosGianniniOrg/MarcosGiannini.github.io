@@ -66,3 +66,10 @@
 - **Alias sugeridos**: Crear accesos directos en terminal para rutas locales frecuentes.
 - Mantener siempre la misma estructura de carpetas en ambos equipos para evitar confusiones.
 - Verificar siempre que las URLs de GitHub Pages estén activas después de cada subida.
+
+#### **Herramientas usadas**
+- Github
+- Visual studio
+- Chat GTP y su editor: CODE EDITOR
+- Chats como Whatsapp, slack o telegram
+- Herramientas google: gmail, excel, drive o word.

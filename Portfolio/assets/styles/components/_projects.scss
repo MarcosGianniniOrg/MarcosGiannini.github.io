@@ -1,12 +1,16 @@
 @use "../variables" as *;
 
+html {
+  scroll-behavior: smooth; // Desplazamiento suave al hacer scroll
+}
+
 #projects {
-  padding: 2rem 0;
+  padding: 4rem 1rem; // Aumentar un poco el padding general
   background: linear-gradient(to bottom, #ffe6f0, #fff);
 
   h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: 2rem;
     color: $primary-color;
     text-transform: uppercase;
@@ -15,7 +19,7 @@
 
   .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
 
     .project-card {
@@ -34,19 +38,24 @@
         transition: transform 0.3s ease;
 
         &:hover {
-          transform: scale(1.05); // Efecto hover para imágenes en desktop
+          transform: scale(1.05); // Efecto hover en las imágenes
         }
       }
 
       h3 {
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 3vw, 1.5rem);
         margin: 0.5rem 0;
         color: $primary-color;
         text-align: center;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #d74b6c; // Alternativa directa (un tono más oscuro del primario)
+        }
       }
 
       p {
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
         color: $text-color;
         margin-bottom: 1rem;
         text-align: center;
@@ -54,11 +63,11 @@
 
       .project-links {
         display: flex;
-        justify-content: space-around;
+        justify-content: center; // Centra los botones
+        gap: 1rem;
         margin-top: 1rem;
 
         .project-link {
-          display: inline-block;
           background-color: $primary-color;
           color: white;
           padding: 0.5rem 1rem;
@@ -76,7 +85,7 @@
         display: block;
         margin-top: 1rem;
         text-align: center;
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
         color: $link-color;
         text-decoration: underline;
         font-style: italic;
@@ -97,28 +106,50 @@
   @media (max-width: 768px) {
     .projects-container {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .project-card {
-      &:hover {
-        transform: scale(1.02); // Hover más sutil en tablets
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      padding: 1rem;
+
+      img {
+        margin-bottom: 0.75rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
       }
     }
   }
 
   @media (max-width: 480px) {
     .project-card {
+      padding: 0.75rem;
+
       img {
-        &:hover {
-          transform: scale(1.03); // Hover en imágenes en móviles
-        }
+        margin-bottom: 0.5rem;
       }
 
-      &:hover {
-        transform: translateY(-3px); // Feedback visual en móviles
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      .project-links {
+        flex-direction: column; // Botones en columna para móviles
+        gap: 0.5rem;
+
+        .project-link {
+          padding: 0.5rem; // Botones más compactos
+          font-size: 0.9rem;
+        }
       }
     }
   }

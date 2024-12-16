@@ -6,24 +6,19 @@
   padding: 4rem 1rem;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     color: $primary-color;
-    margin-bottom: 1rem;
-
-    @media (max-width: 480px) {
-      font-size: 2rem; // Reducir el tamaño del título en móviles
-    }
-
-    @media (max-width: 768px) {
-      font-size: 2.2rem; // Tamaño intermedio para tablets
-    }
+    margin-bottom: 1.5rem; // Mayor separación para respirar
+    font-weight: 500; // Hace la fuente menos gruesa
+    opacity: 0.9;
   }
 
   p {
-    font-size: 1.2rem;
-    color: $text-color;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    color: $text-color-soft;
     margin: $margin auto;
-    max-width: 600px;
+    max-width: 500px;
+    line-height: 1.6; // Mejora el espaciado entre líneas
 
     @media (max-width: 480px) {
       font-size: 1rem; // Ajustar fuente para móviles
@@ -38,10 +33,10 @@
     display: inline-block;
     background-color: $primary-color;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
     border-radius: 5px;
     text-decoration: none;
-    margin-top: $margin;
+    margin-top: calc($cta-margin-top + 0.5rem); // Añadimos 0.5rem extra
 
     &:hover {
       background-color: $link-hover-color;

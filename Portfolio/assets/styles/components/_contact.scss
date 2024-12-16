@@ -1,115 +1,242 @@
 @use "../variables" as *;
 
+/* Estilos responsive para Contact Me */
+
+/* Ajustes generales */
 #contact {
-    padding: 2rem 0;
-    background-color: $secondary-color; // Background color for contrast
+    padding: 2rem 1rem;
+    background-color: #fef6fa;
+}
 
-    h2 {
-        color: $primary-color;
-        font-size: 2rem;
+#contact h2 {
+    color: #f4a6c1;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Ajuste de flex por defecto */
+#contact .contact-container {
+    display: flex;
+    gap: 1.5rem; /* Reduce el espacio entre los elementos */
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: space-between; /* Distribuye igual espacio */
+    align-items: stretch; /* Igual altura para los elementos */
+}
+
+#contact .contact-container form,
+#contact .contact-container .contact-info {
+    flex: 1; /* Ambos elementos ocupan el mismo espacio */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 2.5rem; /* Más espacio interior */
+    max-width: 450px; /* Ancho máximo ajustado */
+}
+
+/* Estilos del formulario */
+#contact .contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact .contact-container form label {
+    font-size: 1rem;
+    color: #333;
+}
+
+#contact .contact-container form input, 
+#contact .contact-container form textarea {
+    border: 1px solid #f4a6c1;
+    border-radius: 5px;
+    padding: 0.75rem 1rem; /* Más espacio interno (arriba/abajo, izq/dcha) */
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#contact .contact-container form input:focus, 
+#contact .contact-container form textarea:focus {
+    border: 2px solid #f4a6c1; /* Borde personalizado */
+    box-shadow: 0 0 8px rgba(244, 166, 193, 0.5); /* Sombra suave */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Transición más fluida */
+}
+
+#contact .contact-container form button {
+    background-color: #f4a6c1;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Suavizamos la transición */
+}
+
+#contact .contact-container form button:hover {
+    background-color: #d14c7d;
+    box-shadow: 0 8px 15px rgba(209, 76, 125, 0.3);
+    transform: translateY(-3px);
+}
+
+#contact .contact-container form button:active {
+    background-color: #bf3c68;
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Estilos para la sección de información de contacto */
+#contact .contact-container .contact-info {
+    text-align: center; /* Centra el contenido */
+
+    p {
+        font-size: 1.1rem; /* Aumenta ligeramente el tamaño */
+        font-weight: 600; /* Más peso para el texto */
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #f4a6c1;
+        font-weight: bold;
+        transition: color 0.3s ease; /* Transición de color */
+
+        &:hover {
+            color: #d14c7d; /* Un tono más oscuro */
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: flex; /* Alineación entre iconos y texto */
+            align-items: center; /* Centra verticalmente */
+            gap: 0.5rem; /* Espacio entre iconos y texto */
+            margin: 0.5rem 0; /* Espacio entre cada línea */
+
+            i {
+                font-size: 1.5rem; /* Aumentar tamaño del icono */
+                color: #f4a6c1;
+                transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+            }
+
+            &:hover i {
+                color: #d14c7d; /* Color más oscuro al hacer hover */
+                transform: scale(1.2); /* Agranda ligeramente el icono */
+            }
+
+            &:hover a {
+                color: #d14c7d; /* Cambiar color del texto en hover */
+            }
+        }
+    }
+}
+
+/* Media Queries */
+
+/* Pantallas medianas (máx. 768px) */
+@media (max-width: 768px) {
+    #contact .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 1.5rem !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #contact .contact-container form,
+    #contact .contact-container .contact-info {
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem 1.5rem;  
+    }
+}
+
+/* Pantallas pequeñas (máx. 480px) */
+@media (max-width: 480px) {
+    #contact .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #contact .contact-container form,
+    #contact .contact-container .contact-info {
+        width: 100% !important;
+        padding: 1rem !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .contact-info {
+        display: block !important; /* Asegura que no herede propiedades de grid */
+        text-align: center !important; /* Centra el texto */
+        padding: 1rem !important;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem !important;
         text-align: center;
-        margin-bottom: 2rem;
     }
 
-    .contact-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        max-width: 900px;
-        margin: 0 auto;
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-            label {
-                font-size: 1rem;
-                color: $text-color;
-            }
-
-            input,
-            textarea {
-                border: 1px solid $primary-color;
-                border-radius: 5px;
-                padding: 0.5rem;
-                font-size: 1rem;
-                color: $text-color;
-
-                &:focus {
-                    outline: none;
-                    border-color: $link-hover-color;
-                    box-shadow: 0 0 4px $link-hover-color;
-                }
-            }
-
-            button {
-                background-color: $primary-color;
-                color: white;
-                padding: 0.75rem;
-                border: none;
-                border-radius: 5px;
-                font-size: 1rem;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-
-                &:hover {
-                    background-color: $link-hover-color;
-                }
-            }
-        }
-
-        .contact-info {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        
-            p {
-                font-size: 1rem;
-                color: $text-color;
-                margin-bottom: 1rem;
-            }
-        
-            ul {
-                list-style: none;
-                padding: 0;
-        
-                li {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 1rem;
-        
-                    i {
-                        font-size: 1.2rem;
-                        margin-right: 0.5rem;
-                        color: $primary-color;
-                        transition: color 0.3s ease; // Añadido para hover
-                    }
-        
-                    a {
-                        color: $primary-color;
-                        text-decoration: none;
-                        font-weight: bold;
-                        font-size: 1rem;
-                        transition: color 0.3s ease; // Transición en el enlace
-        
-                        &:hover {
-                            color: $link-hover-color; // Cambio de color al pasar el ratón
-                            text-decoration: underline;
-                        }
-                    }
-        
-                    &:hover i {
-                        color: $link-hover-color; // Cambia el color del icono al pasar el ratón
-                    }
-                }
-            }
-        }
-        
+    #contact .contact-container form input,
+    #contact .contact-container form textarea {
+        width: 100% !important;
+        font-size: 0.9rem;  
+        padding: 0.75rem;  
     }
+
+    #contact .contact-container form input:focus, 
+    #contact .contact-container form textarea:focus {
+        border: 2px solid #f4a6c1; /* Borde personalizado */
+        box-shadow: 0 0 8px rgba(244, 166, 193, 0.5); /* Sombra suave */
+        transition: border 0.3s ease, box-shadow 0.3s ease; /* Transición más fluida */
+    }
+
+    #contact .contact-container form input:hover, 
+    #contact .contact-container form textarea:hover {
+        border-color: #d14c7d; /* Un tono más oscuro al hacer hover */
+    }
+
+
+    #contact .contact-container form button {
+        background-color: #f4a6c1;
+        color: white;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 8px; /* Ajuste a bordes redondeados más modernos */
+        font-size: 1rem;
+        font-weight: 600; /* Texto más llamativo */
+        cursor: pointer;
+        transition: all 0.3s ease;
+    
+        &:hover {
+            background-color: #d14c7d; /* Tono más oscuro */
+            box-shadow: 0 5px 10px rgba(209, 76, 125, 0.4); /* Sombra ligera al pasar el ratón */
+            transform: translateY(-3px); /* Efecto sutil de elevación */
+        }
+    
+        &:active {
+            transform: translateY(0); /* Elimina elevación al presionar */
+            box-shadow: none;
+        }
+    }
+    
 }

@@ -6,7 +6,7 @@
 
   h2 {
     color: $primary-color;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -22,11 +22,17 @@
 
     .about-image {
       flex-shrink: 0;
-      width: 180px; // Foto un poco más grande
+      width: 180px;
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease-in-out;
+    
+      &:hover {
+        transform: scale(1.1);  // Zoom suave
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); // Sombra más profunda
+      }
     }
 
     .about-text {
@@ -37,7 +43,7 @@
 
       p {
         line-height: 1.6;
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.3rem);
         color: $text-color;
         margin: 0 auto;
       }
@@ -54,7 +60,7 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          width: 130px;
+          width: clamp(160px, 20%, 200px);
           height: 130px;
           background-color: white;
           border: 1px solid $primary-color;
@@ -75,7 +81,7 @@
           }
 
           p {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 1rem);
             color: $text-color;
           }
         }
@@ -88,17 +94,23 @@
     .about-container {
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
 
       .about-image {
         margin-bottom: 1rem;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);  // Zoom más sutil en pantallas pequeñas
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  // Sombra ligera
+          }
       }
 
       .about-text {
         max-width: 90%;
 
         .skills-list {
-          gap: 0.8rem;
+          gap: 1.5rem;
 
           .skill-card {
             width: 110px;
@@ -126,8 +138,9 @@
         justify-items: center; // Centra las tarjetas dentro de cada celda
 
         .skill-card {
-          width: 120px;
-          height: 120px;
+          width: 90%; // Ocupar el 90% del ancho disponible
+          max-width: 250px; // Limitar el ancho máximo
+          padding: 1rem; // Añadir padding interno
 
           i {
             font-size: 1.5rem;

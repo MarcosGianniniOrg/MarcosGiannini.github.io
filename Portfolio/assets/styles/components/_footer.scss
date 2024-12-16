@@ -1,7 +1,8 @@
 @use "../variables" as *;
+@use "sass:color"; // Importa el módulo color
 
 #footer {
-  background-color: $primary-color;
+  background: linear-gradient(135deg, $primary-color, color.adjust($primary-color, $lightness: 10%)); // Degradado sutil
   color: white;
   padding: 2rem 0;
   text-align: center;
@@ -9,10 +10,15 @@
   .footer-content {
     max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     p {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
+      font-size: clamp(0.8rem, 2.5vw, 1rem);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: color.adjust(white, $lightness: -10%); // Sustituido darken
     }
 
     .footer-links {
@@ -20,26 +26,31 @@
       padding: 0;
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      align-items: center;
+      gap: 1.5rem;
 
       li {
         a {
           color: white;
           text-decoration: none;
-          font-size: 1rem;
+          font-size: clamp(0.9rem, 2.5vw, 1.2rem);
           display: flex;
           align-items: center;
           gap: 0.5rem;
+          transition: color 0.3s ease, transform 0.3s ease;
 
           i {
             font-size: 1.2rem;
-            transition: transform 0.3s ease, color 0.3s ease; // Suavizar el hover
+            transition: transform 0.3s ease, color 0.3s ease;
           }
 
           &:hover {
             color: $link-hover-color;
+            transform: translateY(-3px);
+
             i {
-              transform: scale(1.2); // Agranda el icono al pasar el mouse
+              color: $link-hover-color;
+              transform: scale(1.2);
             }
           }
         }
@@ -47,5 +58,34 @@
     }
   }
 
-  margin-top: 2rem; // Añade espacio superior para separarlo de la sección anterior
+  margin-top: 2rem;
+
+  // Estilos Responsive
+  @media (max-width: 768px) {
+    .footer-content {
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem;
+
+    .footer-content {
+      .footer-links {
+        gap: $padding * 0.75;
+        align-items: flex-start;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
 }

@@ -3,12 +3,21 @@ $primary-color: #f4a6c1 !default; // Rosita claro
 $secondary-color: #fef6fa !default; // Fondo suave rosa pálido
 $background-color: #fff !default; // Fondo blanco
 $text-color: #333 !default; // Texto oscuro
+$text-color-soft: #555; // Gris más suave
 $link-color: #f486ab !default; // Rosita intenso para enlaces
 $link-hover-color: #d14c7d !default; // Rosa más fuerte para hover
 
 // Fonts
-$font-family: 'Arial', sans-serif !default;
+$font-primary: 'Montserrat', 'Arial', sans-serif;
+$font-secondary: 'Poppins', 'Arial', sans-serif;
+
+//Logo
+$logo-font-size-mobile: 1.2rem;
 
 // Spacing
 $padding: 1rem !default;
+$header-padding: clamp(0.5rem, 2vw, 1rem);
 $margin: 1rem !default;
+$cta-margin-top: 2rem; // Espaciado más generoso para botones CTA
+$nav-gap: clamp(0.75rem, 2vw, 2rem);
+
