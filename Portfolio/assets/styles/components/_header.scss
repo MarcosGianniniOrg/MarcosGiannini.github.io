@@ -6,10 +6,10 @@ header {
   padding: $header-padding 1rem; // Padding superior e inferior dinámico
 
   nav {
-    display: flex;
-    flex-direction: column; // Coloca el contenido en columna por defecto (móviles)
-    align-items: center; // Centra horizontalmente
-    justify-content: center; // Centra verticalmente
+    display: flex;                // Mantiene la alineación horizontal
+    justify-content: space-between; // Distribuye el logo a la izquierda y el menú a la derecha
+    align-items: center;          // Centra verticalmente el contenido
+    padding: 0 2rem;              // Añade espacio horizontal en los lados
     gap: 1.5rem; // Espacio entre los elementos
 
     // Logo principal del header
@@ -49,13 +49,11 @@ header {
 
     // Navegación principal
     .nav-links {
-      list-style: none; // Elimina los estilos de lista predeterminados
-      padding: 0; // Elimina el padding por defecto
-      margin: 0; // Elimina márgenes predeterminados
-      display: flex;
-      flex-direction: column; // Los enlaces se muestran en columna en móviles
-      align-items: center; // Centra los enlaces horizontalmente
-      gap: 1rem; // Espacio entre enlaces
+      display: flex; // Coloca los enlaces en línea (horizontal)
+      justify-content: center; // Centra horizontalmente los enlaces
+      gap: 2rem; // Espacio entre los enlaces
+      list-style: none; // Elimina los estilos de lista
+      padding: 0; // Elimina el padding
 
       li {
         a {
@@ -91,57 +89,14 @@ header {
   }
 }
 
-// Estilos para pantallas desktop
-@media (min-width: 768px) {
-  header {
-    nav {
-      flex-direction: row; // Cambia a diseño horizontal en pantallas grandes
-      justify-content: space-between; // Distribuye logo y enlaces equitativamente
-      align-items: center; // Centra verticalmente los elementos
-      padding: 1rem 2rem; // Añade padding adicional en desktop
-
-      .logo {
-        margin-bottom: 0; // Elimina margen adicional del logo
-        font-size: 2.5rem; // Tamaño más prominente del logo en desktop
-      }
-
-      .nav-links {
-        flex-direction: row; // Los enlaces se alinean horizontalmente
-        gap: 1.5rem; // Espacio uniforme entre los enlaces
-      }
-    }
-  }
-}
-
-// Ajustes responsive para móviles
-@media (max-width: 480px) {
-  header {
-    background-color: rgba($primary-color, 0.9); // Fondo con ligera opacidad
-    padding: 1.5rem 0; // Padding vertical adicional
-
-    nav {
-      flex-direction: column; // Mantiene el diseño en columna
-      align-items: center; // Centra el contenido
-
-      .logo {
-        margin-bottom: 1rem; // Añade espacio debajo del logo
-      }
-
-      .nav-links {
-        gap: 1rem; // Espacio reducido entre enlaces
-        li {
-          a {
-            font-size: 1.2rem; // Tamaño de fuente más grande para mejor legibilidad
-          }
-        }
-      }
-    }
-  }
+.nav-toggle {
+  display: none; // Ocultar el botón hamburguesa en Desktop
 }
 
 // Sticky Header con efecto sombra
 header.sticky {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra ligera para efecto sticky
-  padding: 0.5rem 1rem; // Padding reducido en modo sticky
-  transition: all 0.3s ease-in-out; // Transición suave al aplicar el estado sticky
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Mejora el efecto visual sticky
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.9); // Fondo semi-transparente para resaltar
 }

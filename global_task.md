@@ -15,8 +15,8 @@
 | **Proyecto**        | **Prioridad**       | **Tarea Principal**                             | **Estado** |
 |---------------------|---------------------|--------------------------------------------------|-------------|
 | **Portfolio - JavaScript** | Alta                | Revisar y estructurar archivos `main.js` y `utils.js` | ❌ |
-|                     | Alta                | Implementar scroll suave para enlaces del menú  | ❌ |
-|                     | Alta                | Crear validación básica de formularios en Contact | ❌ |
+|                     | Alta                | Implementar scroll suave para enlaces del menú  | ✅ |
+|                     | Alta                | Crear validación básica de formularios en Contact | ✅ |
 |                     | Media               | Aplicar animaciones de scroll para elementos visibles | ❌ |
 |                     | Media               | Crear efecto dinámico en el header al hacer scroll | ❌ |
 | **Portfolio - Recursos** | Alta                | Crear `hero-background.jpg` para la sección Hero  | ❌ |

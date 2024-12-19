@@ -1,49 +1,49 @@
 @use "../variables" as *;
 
-#hero {
-  background-color: $background-color;
+#hero-section {
+  background: $hero-gradient; // Usa el degradado definido
+  display: flex;
+  align-items: flex-start; 
+  justify-content: center;
   text-align: center;
-  padding: 4rem 1rem;
+  min-height: 100vh;
+  padding: 2rem;
 
-  h1 {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    color: $primary-color;
-    margin-bottom: 1.5rem; // Mayor separación para respirar
-    font-weight: 500; // Hace la fuente menos gruesa
-    opacity: 0.9;
-  }
+  .hero-content {
+    max-width: 600px;
+    color: $text-light-color;
 
-  p {
-    font-size: clamp(1rem, 3vw, 1.4rem);
-    color: $text-color-soft;
-    margin: $margin auto;
-    max-width: 500px;
-    line-height: 1.6; // Mejora el espaciado entre líneas
-
-    @media (max-width: 480px) {
-      font-size: 1rem; // Ajustar fuente para móviles
+    h1 {
+      font-family: $font-primary;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra ligera para resaltar
     }
 
-    @media (max-width: 768px) {
-      font-size: 1.1rem; // Ajustar fuente para tablets
-    }
-  }
-
-  .cta-button {
-    display: inline-block;
-    background-color: $primary-color;
-    color: white;
-    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: calc($cta-margin-top + 0.5rem); // Añadimos 0.5rem extra
-
-    &:hover {
-      background-color: $link-hover-color;
+    p {
+      font-family: $font-secondary;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      color: $text-color; // Gris oscuro para contraste
     }
 
-    @media (max-width: 480px) {
-      padding: 0.5rem 1rem; // Botón más compacto en móviles
+    .cta-button {
+      background-color: $link-color;
+      color: $text-light-color;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra ligera
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: $link-hover-color;
+        transform: translateY(-5px); // Efecto de elevación
+      }
     }
   }
 }

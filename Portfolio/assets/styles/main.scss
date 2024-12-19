@@ -8,6 +8,8 @@
 @use "./components/about";
 @use "./components/contact";
 @use "./components/footer";
+@use "./components/animations";
+
 
 // Import responsive styles
 @use "./responsive";
@@ -26,3 +28,4 @@ h1, h2, h3 {
 a {
     text-decoration: none; // Elimina subrayados por defecto en todos los enlaces
   }
+  

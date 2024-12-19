@@ -1,11 +1,13 @@
 // Colors
-$primary-color: #f4a6c1 !default; // Rosita claro
-$secondary-color: #fef6fa !default; // Fondo suave rosa pálido
-$background-color: #fff !default; // Fondo blanco
-$text-color: #333 !default; // Texto oscuro
-$text-color-soft: #555; // Gris más suave
-$link-color: #f486ab !default; // Rosita intenso para enlaces
-$link-hover-color: #d14c7d !default; // Rosa más fuerte para hover
+$primary-color: #f4a6c1; // Rosita claro (header)
+$secondary-color: #fde2e4; // Fondo degradado claro
+$gradient-end-color: #f9c2d3; // Degradado rosita más intenso
+$background-color: #fff; // Fondo blanco
+$text-color: #333; // Texto oscuro
+$text-light-color: #fafafa; // Blanco suave
+$link-color: #f486ab; // Rosita intenso
+$link-hover-color: #d14c7d; // Rosa más fuerte
+$hero-gradient: linear-gradient(135deg, $secondary-color, $gradient-end-color); // Degradado hero
 
 // Fonts
 $font-primary: 'Montserrat', 'Arial', sans-serif;
@@ -20,4 +22,3 @@ $header-padding: clamp(0.5rem, 2vw, 1rem);
 $margin: 1rem !default;
 $cta-margin-top: 2rem; // Espaciado más generoso para botones CTA
 $nav-gap: clamp(0.75rem, 2vw, 2rem);
-

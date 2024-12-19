@@ -57,35 +57,4 @@
       }
     }
   }
-
-  margin-top: 2rem;
-
-  // Estilos Responsive
-  @media (max-width: 768px) {
-    .footer-content {
-      .footer-links {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      p {
-        margin-bottom: 1rem;
-      }
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: 1.5rem 1rem;
-
-    .footer-content {
-      .footer-links {
-        gap: $padding * 0.75;
-        align-items: flex-start;
-      }
-
-      p {
-        font-size: 0.9rem;
-      }
-    }
-  }
 }

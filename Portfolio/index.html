@@ -8,8 +8,9 @@
     <meta name="author" content="Marcos Giannini">
     <title>Portfolio Marcos Giannini</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -25,7 +26,7 @@
         </nav>
     </header>
     <main>
-        <section id="hero">
+        <section id="hero-section">
           <div class="hero-content">
             <h1>Hi, I'm Marcos Giannini</h1>
             <p>
@@ -34,39 +35,86 @@
             <a href="#projects" class="cta-button" aria-label="See My Projects">View My Work</a>
           </div>
         </section>
-        <section id="projects">
+        <section id="projects" class="reveal">
           <h2>My Projects</h2>
+          <!-- Filtro de Proyectos -->
+          <div class="filter-container">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="game">Game</button>
+          </div>        
           <div class="projects-container">
-              <div class="project-card">
+              <div class="project-card"  data-category="frontend">
                   <img src="assets/images/age_calculator.png" alt="Screenshot of Age Calculator App">
                   <h3>Age Calculator</h3>
                   <p>A simple app to calculate your exact age based on your date of birth.</p>
-                  <div class="project-links">
+                  <div class="project-links" >
                       <a href="https://marcosgiannini.github.io/Age_Calculator/" target="_blank" class="project-link" aria-label="View Age Calculator Live">View App</a>
-                      <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Portfolio/Age_Calculator" target="_blank" class="project-link" aria-label="View Age Calculator on GitHub">View on GitHub</a>
+                      <a href="https://github.com/MarcosGiannini/Age_Calculator" target="_blank" class="project-link" aria-label="View Age Calculator on GitHub">View on GitHub</a>
                   </div>
               </div>
-              <div class="project-card">
+              <div class="project-card"  data-category="frontend">
                   <img src="assets/images/product_tracker.png" alt="Screenshot of Product Tracker App">
                   <h3>Product Tracker</h3>
                   <p>An app to track and manage product inventories dynamically.</p>
                   <div class="project-links">
                       <a href="https://marcosgiannini.github.io/Product_Tracker/" target="_blank" class="project-link" aria-label="View Product Tracker Live">View App</a>
-                      <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Portfolio/Product_Tracker" target="_blank" class="project-link" aria-label="View Product Tracker on GitHub">View on GitHub</a>
+                      <a href="https://github.com/MarcosGiannini/Product_Tracker" target="_blank" class="project-link" aria-label="View Product Tracker on GitHub">View on GitHub</a>
                   </div>
               </div>
-              <div class="project-card">
+              <div class="project-card"  data-category="game">
                 <img src="assets/images/forza_preview.png" alt="Screenshot of Forza Game">
                 <h3>Forza (Coming Soon)</h3>
                 <p>A top-down 2D arcade-style game built using HTML5 Canvas.</p>
-                <a href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Forza" 
-                   target="_blank" 
-                   class="development-link" 
-                   aria-label="Project in Development">Project in Development</a>
-              </div>                        
+                <div class="project-links">
+                  <a
+                    class="development-link"
+                    href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Forza"
+                    target="_blank"
+                    aria-label="Project in Development"
+                  >
+                  <i class="fas fa-tools"></i>
+                    Project in Development
+                  </a>
+                </div>
+              </div>   
+              <div class="project-card" data-category="frontend">
+                <img src="assets/images/portfolio_builder_preview.png" alt="Screenshot of Portfolio Builder Project">
+                <h3>Portfolio Builder</h3>
+                <p>A professional and minimalistic portfolio generator for developers to showcase their skills and projects.</p>
+                <div class="project-links">
+                  <a
+                    class="development-link"
+                    href="https://github.com/MarcosGianniniOrg/MarcosGiannini.github.io/tree/main/Portfolio"
+                    target="_blank"
+                    aria-label="Project in Development"
+                  >
+                  <i class="fas fa-tools"></i>
+                    Project in Development
+                  </a>
+                </div>
+              </div>
+              
+              <div class="project-card" data-category="frontend">
+                <img src="assets/images/task_manager_preview.png" alt="Screenshot of Task Manager App">
+                <h3>Task Manager</h3>
+                <p>A sleek and simple app to organize daily tasks, track progress, and boost productivity effectively.</p>
+                <div class="project-links">
+                  <a
+                    class="development-link"
+                    href="https://github.com/MarcosGiannini/Task_Manager"
+                    target="_blank"
+                    aria-label="Project in Development"
+                  >
+                  <i class="fas fa-tools"></i>
+                    Project in Development
+                  </a>
+                </div>
+              </div>                             
           </div>
         </section>
-        <section id="about">
+        <section id="about" class="reveal">
           <h2>About Me</h2>
           <div class="about-container">
             <img src="assets/images/profile.png" alt="Profile Picture of Marcos Giannini" class="about-image" />
@@ -113,20 +161,23 @@
             </div>
           </div>
           
-        </section>
-              
-        <section id="contact">
+        </section>        
+        <section id="contact" class="reveal">
           <h2>Contact Me</h2>
           <div class="contact-container">
-              <form action="https://formspree.io/f/meoqwvjq" method="POST">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your Name" required>
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                  <button type="submit">Send Message</button>
-              </form>
+            <form id="contact-form" action="https://formspree.io/f/meoqwvjq" method="POST" novalidate>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required minlength="3" maxlength="50" pattern="[A-Za-z\s]+">
+              
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+              
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your Message" required minlength="10" maxlength="500"></textarea>
+              
+              <button type="submit">Send Message</button>
+          </form>
+          
               <div class="contact-info">
                   <p>You can also reach me via:</p>
                   <ul>
@@ -169,6 +220,7 @@
             </ul>
         </div>
     </footer>
+
     <script src="assets/scripts/main.js"></script>
 </body>
 </html>
