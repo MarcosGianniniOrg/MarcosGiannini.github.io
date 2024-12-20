@@ -595,390 +595,66 @@ html {
 
 @media (max-width: 1024px) {
   header nav {
-    flex-direction: row; /* Cambia a fila para aprovechar el espacio */
-    justify-content: space-between; /* Espacia elementos */
-    align-items: center;
-    padding: 1.5rem; /* Ajusta el padding */
+    flex-direction: row; /* Cambia a fila */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 1.5rem; /* Ajusta el espacio interno */
   }
   header nav .logo {
-    font-size: 2rem; /* Escala el logo un poco más */
+    font-size: 2rem; /* Escala el logo */
   }
   header nav .nav-links {
     flex-direction: row; /* Opciones en línea */
-    gap: 2rem; /* Separa las opciones del menú */
+    gap: 2rem; /* Espaciado entre enlaces */
   }
   header nav .nav-links li a {
-    font-size: 1.2rem; /* Aumenta un poco el tamaño del texto */
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
   }
+}
+
+@media (max-width: 1024px) {
   #hero-section {
-    padding: 2rem 1.5rem; /* Espacio generoso */
-    min-height: 70vh; /* Ajusta altura mínima */
+    padding: 2rem 1.5rem; /* Ajusta el espacio interno */
+    min-height: 70vh; /* Ajusta la altura mínima */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Ordena elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Alinea el texto al centro */
   }
   #hero-section .hero-content h1 {
     font-size: 2.5rem; /* Aumenta el tamaño del título */
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Espacio debajo del título */
   }
   #hero-section .hero-content p {
-    font-size: 1.2rem; /* Texto más legible en pantallas más grandes */
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem; /* Mejora la legibilidad */
+    margin-bottom: 1.5rem; /* Espacio debajo del párrafo */
   }
   #hero-section .hero-content .cta-button {
     padding: 1rem 2rem; /* Botón más grande */
-    font-size: 1rem; /* Texto del botón más visible */
+    font-size: 1rem; /* Aumenta el tamaño del texto del botón */
   }
+}
+
+@media (max-width: 1024px) {
   .projects-container {
     grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 2rem; /* Espaciado mayor entre tarjetas */
+    gap: 2rem; /* Espaciado entre las tarjetas */
+    padding: 1rem; /* Espaciado interno */
   }
 }
-/* Pantallas medianas (máx. 768px) */
-@media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-  header nav .logo {
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-  }
-  header nav .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
-  }
-  header nav .nav-links li {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 0.5s;
-  }
-  header nav .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-  }
-  header nav .nav-links li a:hover {
-    color: #d14c7d;
-  }
-  #hero-section {
-    padding: 0.8rem 1rem; /* Padding más compacto */
-    min-height: 50vh; /* Altura más ajustada */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #hero-section .hero-content h1 {
-    font-size: 1.9rem; /* Tamaño más fluido */
-    margin-bottom: 0.6rem;
-  }
-  #hero-section .hero-content p {
-    font-size: 0.95rem;
-    margin-bottom: 0.8rem;
-  }
-  #hero-section .hero-content .cta-button {
-    padding: 0.8rem 1.5rem; /* Botón más llamativo */
-    font-size: 0.9rem;
-  }
-  .projects-container {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 1.5rem; /* Espaciado más compacto */
-  }
-  .project-card h3 {
-    font-size: 1.1rem; /* Títulos ligeramente más pequeños */
-  }
-  .project-card p {
-    font-size: 0.85rem; /* Texto reducido */
-  }
-  .project-card .project-links a {
-    font-size: 0.85rem; /* Tamaño de los botones más pequeño */
-    padding: 0.5rem 1rem; /* Botones más compactos */
-  }
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .about-container .about-image {
-    margin-bottom: 1rem;
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease-in-out;
-  }
-  .about-container .about-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  .about-container .about-text {
-    max-width: 90%;
-  }
-  .about-container .about-text .skills-list {
-    gap: 1.5rem;
-  }
-  .about-container .about-text .skills-list .skill-card {
-    width: 110px;
-    height: 110px;
-  }
-  .about-container .about-text .skills-list .skill-card i {
-    font-size: 1.5rem;
-  }
-  .about-container .about-text .skills-list .skill-card p {
-    font-size: 0.8rem;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .nav-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-  .nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-  }
-  #contact .contact-container {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-    padding: 1.5rem !important;
-    margin: 0 auto !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  #contact .contact-container form,
-  #contact .contact-container .contact-info {
-    width: 100%;
-    max-width: 100%;
-    padding: 2rem 1.5rem;
-  }
+.projects-container .project-card h3 {
+  font-size: 1.5rem; /* Tamaño del título de cada tarjeta */
+  color: purple; /* Cambiamos el color del título a púrpura */
 }
-/* Móviles pequeños (máx. 480px) */
-@media (max-width: 480px) {
-  header nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 1rem;
-  }
-  header nav .logo {
-    font-size: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  header nav .nav-links {
-    gap: 1.2rem;
-  }
-  header nav .nav-links li a {
-    font-size: 1rem;
-  }
-  #hero-section {
-    padding: 0.6rem 1rem;
-    min-height: 65vh;
-  }
-  #hero-section .hero-content h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.6rem;
-  }
-  #hero-section .hero-content p {
-    font-size: 0.85rem;
-    margin-bottom: 0.8rem;
-  }
-  #hero-section .hero-content .cta-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
-  }
-  .projects-container {
-    grid-template-columns: 1fr; /* Mantén una sola columna */
-    gap: 1.2rem; /* Aumenta ligeramente el espaciado */
-    padding: 1rem; /* Añade padding extra para margen lateral */
-  }
-  .project-card {
-    padding: 1.2rem; /* Espaciado interno más generoso */
-  }
-  .project-card h3 {
-    font-size: 1rem; /* Ajusta el tamaño del título */
-  }
-  .project-card p {
-    font-size: 0.85rem; /* Texto descriptivo más compacto */
-  }
-  .project-card .project-links a {
-    font-size: 0.85rem; /* Botones más pequeños */
-    padding: 0.5rem 1rem;
-  }
-  .about-text .skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    justify-items: center;
-  }
-  .about-text .skills-list .skill-card {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-    width: 100%;
-    max-width: 160px;
-  }
-  .about-text .skills-list .skill-card i {
-    font-size: 2rem;
-    color: #d14c7d;
-  }
-  .about-text .skills-list .skill-card p {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  .filter-btn {
-    width: 100%;
-    max-width: 200px;
-    margin: 0.5rem auto;
-  }
-  .project-card {
-    padding: 1rem;
-  }
-  .project-card h3 {
-    font-size: 1.2rem;
-  }
-  .project-card p {
-    font-size: 0.9rem;
-  }
-  #contact .contact-container {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem !important;
-    padding: 1rem !important;
-    margin: 0 auto !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  #contact .contact-container form,
-  #contact .contact-container .contact-info {
-    width: 100% !important;
-    padding: 1rem !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .contact-info {
-    display: block !important; /* Asegura que no herede propiedades de grid */
-    text-align: center !important; /* Centra el texto */
-    padding: 1rem !important;
-  }
-  #contact h2 {
-    font-size: 1.5rem !important;
-    text-align: center;
-  }
-  #contact .contact-container form input,
-  #contact .contact-container form textarea {
-    width: 100% !important;
-    font-size: 0.9rem;
-    padding: 0.75rem;
-  }
-  #contact .contact-container form input:focus,
-  #contact .contact-container form textarea:focus {
-    border: 2px solid #f4a6c1; /* Borde personalizado */
-    box-shadow: 0 0 8px rgba(244, 166, 193, 0.5); /* Sombra suave */
-    transition: border 0.3s ease, box-shadow 0.3s ease; /* Transición más fluida */
-  }
-  #contact .contact-container form input:hover,
-  #contact .contact-container form textarea:hover {
-    border-color: #d14c7d; /* Un tono más oscuro al hacer hover */
-  }
-  #contact .contact-container form button {
-    background-color: #f4a6c1;
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 8px; /* Ajuste a bordes redondeados más modernos */
-    font-size: 1rem;
-    font-weight: 600; /* Texto más llamativo */
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  #contact .contact-container form button:hover {
-    background-color: #d14c7d; /* Tono más oscuro */
-    box-shadow: 0 5px 10px rgba(209, 76, 125, 0.4); /* Sombra ligera al pasar el ratón */
-    transform: translateY(-3px); /* Efecto sutil de elevación */
-  }
-  #contact .contact-container form button:active {
-    transform: translateY(0); /* Elimina elevación al presionar */
-    box-shadow: none;
-  }
+.projects-container .project-card p {
+  font-size: 1rem; /* Texto más legible */
 }
-/* Móviles extra pequeños (máx. 320px) */
-@media (max-width: 320px) {
-  /* Header */
-  header nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-  }
-  header nav .logo {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-  }
-  header nav .nav-links {
-    gap: 0.8rem;
-  }
-  header nav .nav-links li a {
-    font-size: 0.9rem;
-  }
-  /* Hero Section */
-  #hero-section {
-    padding: 0.8rem 0.5rem; /* Padding más ajustado */
-    min-height: 60vh; /* Altura mínima reducida para dispositivos pequeños */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  #hero-section .hero-content h1 {
-    font-size: 1.5rem; /* Encabezado reducido */
-    margin-bottom: 0.5rem; /* Espacio inferior más compacto */
-  }
-  #hero-section .hero-content p {
-    font-size: 0.8rem; /* Texto más pequeño */
-    margin-bottom: 0.8rem; /* Espacio inferior reducido */
-  }
-  #hero-section .hero-content .cta-button {
-    padding: 0.5rem 1rem; /* Botón más pequeño */
-    font-size: 0.7rem; /* Texto más pequeño */
-  }
-  .projects-container {
-    grid-template-columns: 1fr; /* Una columna */
-    gap: 1rem; /* Reduce el espaciado */
-    padding: 0.8rem; /* Margen lateral reducido */
-  }
-  .project-card {
-    padding: 0.8rem; /* Padding compacto */
-  }
-  .project-card h3 {
-    font-size: 0.9rem; /* Títulos más pequeños */
-  }
-  .project-card p {
-    font-size: 0.75rem; /* Texto descriptivo compacto */
-  }
-  .project-card .project-links a {
-    font-size: 0.75rem; /* Botones más pequeños */
-    padding: 0.3rem 0.6rem; /* Espaciado reducido */
-  }
+.projects-container .project-card .project-links a {
+  font-size: 1rem; /* Tamaño de texto en los botones */
+  padding: 0.75rem 1.5rem; /* Botones más grandes */
 }
+
 body {
   font-family: "Montserrat", "Arial", sans-serif;
   line-height: 1.6;
