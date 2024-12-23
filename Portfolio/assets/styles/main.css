@@ -8,17 +8,13 @@ header nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 2vw, 2rem);
 }
 header nav .logo a {
-  text-align: center;
-  display: inline-block;
-  margin: 0;
+  color: white;
+  position: relative;
   font-weight: bold;
   font-size: clamp(1.5rem, 4vw, 2rem);
-  color: white;
-  text-decoration: none;
-  position: relative;
 }
 header nav .logo a::after {
   content: "";
@@ -38,18 +34,16 @@ header nav .logo a:hover {
   color: #d14c7d;
 }
 header nav .nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 2rem);
 }
 header nav .nav-links li a {
-  text-decoration: none;
-  font-size: 1.2rem;
   color: white;
-  transition: color 0.3s ease-in-out, transform 0.3s ease;
   position: relative;
+  font-size: 1.2rem;
 }
 header nav .nav-links li a::after {
   content: "";
@@ -71,13 +65,6 @@ header nav .nav-links li a:hover {
 
 .nav-toggle {
   display: none;
-}
-
-header.sticky {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 #hero-section {
@@ -123,200 +110,98 @@ header.sticky {
   transform: translateY(-5px);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 #projects {
-  padding: 4rem 1rem;
-  background: linear-gradient(to bottom, #ffe6f0, #fff);
+  padding: 4rem 1rem; /* Espaciado superior e inferior */
+  background: linear-gradient(to bottom, #ffe6f0, #fff); /* Fondo elegante */
 }
 #projects h2 {
   text-align: center;
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Tamaño adaptable */
   margin-bottom: 2.5rem;
   color: #f4a6c1;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 #projects .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
+  display: grid; /* Diseño en cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); /* Columnas adaptables */
+  gap: 2rem; /* Espaciado entre tarjetas */
+  justify-items: center; /* Centrado de tarjetas */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 2rem 1rem; /* Espaciado interno */
 }
-#projects .projects-container .project-card {
+#projects .project-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  max-width: 330px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#projects .projects-container .project-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-#projects .projects-container .project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-#projects .projects-container .project-card img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-#projects .projects-container .project-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 1rem 0 0.5rem;
-  color: #ff87ab;
-  text-align: center;
-}
-#projects .projects-container .project-card p {
-  font-size: 0.9rem;
-  color: #555;
-  padding: 0 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  flex-grow: 1;
-}
-#projects .projects-container .project-card .development-link {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: auto;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  background: #f5f5f5;
-  color: #333;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  text-align: center;
+  background: #fff; /* Fondo blanco para destacar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 1.5rem; /* Espaciado interno */
+  max-width: 100%; /* Asegura que no excedan su contenedor */
+  overflow: hidden; /* Previene desbordamientos */
 }
-#projects .projects-container .project-card .development-link:hover {
-  background: #ffb6c1;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+#projects .project-card img {
+  max-width: 100%; /* Las imágenes se ajustan al ancho del contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 1rem;
 }
-#projects .projects-container .project-card .development-link i {
-  font-size: 1rem;
+#projects .project-card h3 {
+  font-size: 1.5rem; /* Tamaño de título */
+  color: #f4a6c1; /* Color principal */
+  margin-bottom: 0.5rem;
 }
-#projects .projects-container .project-card .project-links {
+#projects .project-card p {
+  font-size: 1rem; /* Texto más legible */
+  margin-bottom: 1rem;
+  color: #555; /* Color neutro */
+}
+#projects .project-card .project-links {
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
-#projects .projects-container .project-card .project-links a {
-  display: inline-block;
+#projects .project-card .project-links a {
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.6rem 1.2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f4a6c1; /* Fondo con el color principal */
+  color: #fff; /* Texto blanco */
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
-#projects .projects-container .project-card .project-links a:first-child {
-  background: #ff87ab;
-  color: #fff;
-}
-#projects .projects-container .project-card .project-links a:first-child:hover {
-  background: #e07595;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-#projects .projects-container .project-card .project-links a:last-child {
-  background: #f5f5f5;
-  color: #333;
-}
-#projects .projects-container .project-card .project-links a:last-child:hover {
-  background: #ddd;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#projects .project-card .project-links a .project-links a:hover {
+  background-color: rgb(238.39, 120.61, 161.38); /* Usamos la variable ya definida */
 }
 #projects .filter-container {
   display: flex;
-  justify-content: space-between;
-  gap: 0;
-  margin: 0 auto 2rem;
-  max-width: 1020px;
-  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 1rem; /* Espaciado entre botones */
+  margin-bottom: 2rem; /* Espaciado con la sección de proyectos */
 }
 #projects .filter-container .filter-btn {
-  padding: 0.4rem 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #555;
-  background-color: #f5f5f5;
-  margin-bottom: 1rem;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: none;
-}
-#projects .filter-container .filter-btn.active {
-  background-color: #ff87ab;
-  color: #fff;
-  box-shadow: 0 6px 8px rgba(255, 135, 171, 0.3);
+  padding: 0.75rem 1.5rem; /* Espaciado interno de los botones */
+  font-size: 1rem; /* Texto legible */
+  font-weight: 600; /* Texto destacado */
+  color: #333; /* Color del texto */
+  background-color: #fff; /* Fondo claro */
+  border: 1px solid #f4a6c1; /* Borde con el color principal */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Indicador interactivo */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 #projects .filter-container .filter-btn:hover {
-  background-color: #d14c7d;
-  color: #fff;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f4a6c1; /* Fondo con el color principal */
+  color: #fafafa; /* Texto blanco */
+  transform: scale(1.05); /* Efecto de zoom suave */
 }
-#projects .filter-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.5rem;
-  padding: 0 2.5rem;
-  justify-content: center;
-}
-#projects .filter-container button {
-  padding: 0.8rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 12px;
-  background-color: #f4a6c1;
-  color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-#projects .filter-container button:hover {
-  background-color: #d14c7d;
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(209, 76, 125, 0.2);
-}
-#projects .project-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 0 2rem;
-}
-#projects .project-filters button {
-  flex: 1 1 calc(50% - 1rem);
-  max-width: 45%;
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #f4a6c1;
-  color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
-}
-#projects .project-filters button:hover {
-  background-color: #d14c7d;
+#projects .filter-container .filter-btn.active {
+  background-color: #f4a6c1; /* Fondo activo */
+  color: #fafafa; /* Texto blanco */
+  border-color: rgb(238.39, 120.61, 161.38); /* Usamos la variable existente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 #about {
@@ -593,22 +478,45 @@ html {
   transform: translateY(0);
 }
 
+header {
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+header nav {
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 2rem);
+}
+header nav .logo {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+}
+header nav .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav .nav-links li a {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
 @media (max-width: 1024px) {
   header nav {
-    flex-direction: row; /* Cambia a fila */
-    justify-content: space-between; /* Espaciado entre elementos */
-    align-items: center; /* Centra verticalmente */
-    padding: 1.5rem; /* Ajusta el espacio interno */
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column; /* Asegura el cambio a columna */
+    align-items: center; /* Centra contenido */
+    gap: 1rem; /* Ajusta el espaciado */
   }
   header nav .logo {
-    font-size: 2rem; /* Escala el logo */
+    font-size: clamp(1rem, 2.5vw, 1.3rem); /* Reduce ligeramente el tamaño del logo */
   }
   header nav .nav-links {
-    flex-direction: row; /* Opciones en línea */
-    gap: 2rem; /* Espaciado entre enlaces */
+    flex-direction: column; /* Alinea enlaces en columna */
+    gap: 0.5rem; /* Espaciado más compacto */
   }
   header nav .nav-links li a {
-    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Ajusta el tamaño de los enlaces */
   }
 }
 
@@ -637,22 +545,66 @@ html {
 }
 
 @media (max-width: 1024px) {
-  .projects-container {
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 2rem; /* Espaciado entre las tarjetas */
-    padding: 1rem; /* Espaciado interno */
+  #projects {
+    padding: 2rem 1rem;
   }
-}
-.projects-container .project-card h3 {
-  font-size: 1.5rem; /* Tamaño del título de cada tarjeta */
-  color: purple; /* Cambiamos el color del título a púrpura */
-}
-.projects-container .project-card p {
-  font-size: 1rem; /* Texto más legible */
-}
-.projects-container .project-card .project-links a {
-  font-size: 1rem; /* Tamaño de texto en los botones */
-  padding: 0.75rem 1.5rem; /* Botones más grandes */
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  #projects .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem; /* Espaciado horizontal */
+    row-gap: 1rem; /* Espaciado vertical */
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  #projects .filter-container .filter-btn {
+    flex: 1 0 40%; /* Ajusta el ancho al 40% */
+    max-width: 180px; /* Limita el ancho */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  #projects .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem 2rem; /* Espaciado vertical y horizontal */
+    justify-content: center;
+  }
+  #projects .project-card {
+    padding: 1rem;
+    text-align: center;
+  }
+  #projects .project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  #projects .project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  #projects .project-card .project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Espaciado entre botones */
+    align-items: center; /* Centrado de los botones */
+  }
+  #projects .project-card .project-links a {
+    display: inline-flex; /* Asegura el centrado interno */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    padding: 0.7rem 1.2rem; /* Ajusta el espaciado interno */
+    font-size: 0.9rem; /* Texto consistente */
+    font-weight: 600; /* Hace el texto más visible */
+    border-radius: 6px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+  }
+  #projects .project-card .project-links a:hover {
+    background-color: rgb(238.39, 120.61, 161.38); /* Usamos la variable para hover */
+    transform: scale(1.02); /* Pequeño zoom en hover */
+  }
 }
 
 body {

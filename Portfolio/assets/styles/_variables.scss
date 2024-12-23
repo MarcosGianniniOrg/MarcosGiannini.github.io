@@ -1,24 +1,50 @@
+// Importación de funciones
+@use "sass:color";
+
+// Variables globales
+// ------------------
+
 // Colors
-$primary-color: #f4a6c1; // Rosita claro (header)
-$secondary-color: #fde2e4; // Fondo degradado claro
-$gradient-end-color: #f9c2d3; // Degradado rosita más intenso
-$background-color: #fff; // Fondo blanco
-$text-color: #333; // Texto oscuro
-$text-light-color: #fafafa; // Blanco suave
-$link-color: #f486ab; // Rosita intenso
-$link-hover-color: #d14c7d; // Rosa más fuerte
-$hero-gradient: linear-gradient(135deg, $secondary-color, $gradient-end-color); // Degradado hero
+$primary-color: #f4a6c1;
+$secondary-color: #fde2e4;
+$primary-color-darker: color.adjust($primary-color, $lightness: -10%);
+$gradient-end-color: #f9c2d3;
+$background-color: #fff;
+$text-color: #333;
+$text-light-color: #fafafa;
+$link-color: #f486ab;
+$link-hover-color: #d14c7d;
+$hero-gradient: linear-gradient(135deg, $secondary-color, $gradient-end-color);
 
 // Fonts
 $font-primary: 'Montserrat', 'Arial', sans-serif;
 $font-secondary: 'Poppins', 'Arial', sans-serif;
 
-//Logo
-$logo-font-size-mobile: 1.2rem;
-
 // Spacing
 $padding: 1rem !default;
 $header-padding: clamp(0.5rem, 2vw, 1rem);
 $margin: 1rem !default;
-$cta-margin-top: 2rem; // Espaciado más generoso para botones CTA
+$cta-margin-top: 2rem;
 $nav-gap: clamp(0.75rem, 2vw, 2rem);
+
+// Variables específicas por componente
+// ------------------------------------
+
+// Header
+$header-background-color: $primary-color; // Alias descriptivo
+$header-link-hover-color: $link-hover-color; 
+
+// Hero
+$hero-padding: 2rem;
+$hero-title-size: clamp(2rem, 5vw, 3.5rem);
+$hero-paragraph-size: clamp(1rem, 2vw, 1.5rem);
+$hero-button-color: $primary-color-darker;
+
+// Projects
+$project-card-background: $background-color;
+$project-card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$project-gap: 1.5rem;
+
+// Footer
+$footer-background-color: $secondary-color;
+$footer-text-color: $text-light-color;

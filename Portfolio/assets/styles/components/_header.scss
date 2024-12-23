@@ -2,7 +2,7 @@
 
 // Header principal con estilos generales
 header {
-  background-color: $primary-color; // Color de fondo del header
+  background-color: $header-background-color; // Fondo del header
   padding: $header-padding 1rem; // Padding superior e inferior dinámico
 
   nav {
@@ -10,93 +10,57 @@ header {
     justify-content: space-between; // Distribuye el logo a la izquierda y el menú a la derecha
     align-items: center;          // Centra verticalmente el contenido
     padding: 0 2rem;              // Añade espacio horizontal en los lados
-    gap: 1.5rem; // Espacio entre los elementos
+    gap: $nav-gap; // Espacio entre los elementos
+
+    // Mixin para efectos hover
+    @mixin link-hover-effect($color) {
+      color: white; // Color base inicial
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: $color;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
+      &:hover {
+        color: $color;
+      }
+    }
 
     // Logo principal del header
-    .logo {
-      a {
-        text-align: center; // Centra el texto del logo
-        display: inline-block; // Permite aplicar dimensiones al logo
-        margin: 0; // Elimina márgenes innecesarios
-        font-weight: bold; // Aplica negrita al texto
-        font-size: clamp(1.5rem, 4vw, 2rem); // Tamaño flexible del texto
-        color: white; // Color blanco para el texto
-        text-decoration: none; // Elimina subrayado predeterminado
-        position: relative; // Necesario para el efecto animado del subrayado
-
-        // Subrayado animado en hover
-        &::after {
-          content: ''; // Inserta contenido vacío para el subrayado
-          position: absolute; // Posición absoluta relativa al enlace
-          bottom: -2px; // Ubica la línea debajo del texto
-          left: 50%; // Inicia desde el centro
-          width: 0; // Anchura inicial cero
-          height: 2px; // Grosor del subrayado
-          background-color: $link-hover-color; // Color del subrayado
-          transition: width 0.3s ease, left 0.3s ease; // Efecto de animación suave
-        }
-
-        &:hover::after {
-          width: 100%; // Expande el subrayado al 100% del ancho
-          left: 0; // Ajusta la posición al inicio
-        }
-
-        &:hover {
-          color: $link-hover-color; // Cambia el color del texto al hacer hover
-        }
-      }
+    .logo a {
+      @include link-hover-effect($header-link-hover-color);
+      font-weight: bold;
+      font-size: clamp(1.5rem, 4vw, 2rem);
     }
 
     // Navegación principal
     .nav-links {
-      display: flex; // Coloca los enlaces en línea (horizontal)
-      justify-content: center; // Centra horizontalmente los enlaces
-      gap: 2rem; // Espacio entre los enlaces
-      list-style: none; // Elimina los estilos de lista
-      padding: 0; // Elimina el padding
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: $nav-gap; // Espaciado entre enlaces
+    }
 
-      li {
-        a {
-          text-decoration: none; // Elimina subrayado predeterminado
-          font-size: 1.2rem; // Tamaño del texto de los enlaces
-          color: white; // Color blanco para los enlaces
-          transition: color 0.3s ease-in-out, transform 0.3s ease; // Transición suave para hover
-          position: relative; // Necesario para el efecto de subrayado animado
-
-          // Subrayado animado en hover
-          &::after {
-            content: ''; // Inserta contenido vacío para el subrayado
-            position: absolute;
-            bottom: -2px; // Ubica la línea justo debajo del texto
-            left: 50%; // Inicia desde el centro del enlace
-            width: 0; // Anchura inicial del subrayado
-            height: 2px; // Grosor de la línea
-            background-color: $link-hover-color; // Color del subrayado
-            transition: width 0.3s ease, left 0.3s ease; // Efecto suave en hover
-          }
-
-          &:hover::after {
-            width: 100%; // Expande el subrayado a todo el ancho del enlace
-            left: 0; // Posiciona el subrayado al inicio
-          }
-
-          &:hover {
-            color: $link-hover-color; // Cambia el color del texto al pasar el ratón
-          }
-        }
-      }
+    .nav-links li a {
+      @include link-hover-effect($header-link-hover-color);
+      font-size: 1.2rem;
     }
   }
 }
 
 .nav-toggle {
   display: none; // Ocultar el botón hamburguesa en Desktop
-}
-
-// Sticky Header con efecto sombra
-header.sticky {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Mejora el efecto visual sticky
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.9); // Fondo semi-transparente para resaltar
 }
