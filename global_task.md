@@ -86,7 +86,7 @@ Este archivo contiene un resumen detallado del estado actual, instrucciones clav
 ### **Diseño SCSS/CSS**
 | **Sección**   | **Estado Desktop**   | **Responsive 1024px** | **Responsive 768px** | **Responsive 480px** | **Responsive 320px** | **Comentarios**                            |
 |---------------|----------------------|-----------------------|-----------------------|-----------------------|-----------------------|--------------------------------------------|
-| **Header**    | ✔️                   | ✔️                    | ❌                    | ❌                    | ❌                    | Revisar archivo padre y optimizar variables|
+| **Header**    | ✔️                   | ✔️                    | ✔️                    | ✔️                    | ✔️                    | Pendiente revisión codigo óptimo |
 | **Hero**      | ✔️                   | ✔️                    | ❌                    | ❌                    | ❌                    | Revisar archivo padre y optimizar variables|
 | **Projects**  | ✔️                   | ✔️                    | ❌                    | ❌                    | ❌                    | Revisar variables en `_variables.scss`     |
 | **About**     | ❌                   | ❌                    | ❌                    | ❌                    | ❌                    | Todo pendiente                              |
