@@ -11,10 +11,11 @@ header nav {
   gap: clamp(0.75rem, 2vw, 2rem);
 }
 header nav .logo a {
-  color: white;
+  color: inherit;
   position: relative;
   font-weight: bold;
   font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #fafafa;
 }
 header nav .logo a::after {
   content: "";
@@ -41,9 +42,11 @@ header nav .nav-links {
   gap: clamp(0.75rem, 2vw, 2rem);
 }
 header nav .nav-links li a {
-  color: white;
+  color: inherit;
   position: relative;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: #fafafa;
+  text-decoration: none;
 }
 header nav .nav-links li a::after {
   content: "";
@@ -478,24 +481,6 @@ header nav .nav-links li a:hover {
   transform: translateY(0);
 }
 
-header {
-  padding: clamp(0.5rem, 2vw, 1rem);
-}
-header nav {
-  align-items: center;
-  gap: clamp(0.75rem, 2vw, 2rem);
-}
-header nav .logo {
-  font-size: clamp(1.2rem, 4vw, 2rem);
-}
-header nav .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-header nav .nav-links li a {
-  font-size: clamp(1rem, 3vw, 1.2rem);
-}
 @media (max-width: 1024px) {
   header nav {
     flex-direction: row;
@@ -503,20 +488,55 @@ header nav .nav-links li a {
   }
 }
 @media (max-width: 768px) {
+  header header nav {
+    flex-direction: row; /* Mantén en fila horizontal */
+    justify-content: space-between; /* Espaciado entre logo y menú */
+    align-items: center; /* Centra verticalmente */
+    gap: clamp(0.75rem, 2vw, 2rem); /* Mantén un espaciado equilibrado */
+  }
+  header header nav .logo {
+    font-size: clamp(1.2rem, 2.8vw, 1.5rem); /* Tamaño ligeramente mayor */
+  }
+  header header nav .nav-links {
+    flex-direction: row; /* Mantén los enlaces en fila */
+    gap: 1.5rem; /* Ajusta el espaciado entre enlaces */
+  }
+  header header nav .nav-links li a {
+    font-size: clamp(1rem, 2.2vw, 1.2rem); /* Tamaño consistente */
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
   header nav {
-    flex-direction: column; /* Asegura el cambio a columna */
-    align-items: center; /* Centra contenido */
-    gap: 1rem; /* Ajusta el espaciado */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
   }
   header nav .logo {
-    font-size: clamp(1rem, 2.5vw, 1.3rem); /* Reduce ligeramente el tamaño del logo */
+    font-size: clamp(1rem, 2vw, 1.3rem);
   }
   header nav .nav-links {
-    flex-direction: column; /* Alinea enlaces en columna */
-    gap: 0.5rem; /* Espaciado más compacto */
+    flex-direction: column;
+    gap: 0.75rem;
   }
   header nav .nav-links li a {
-    font-size: clamp(0.9rem, 2vw, 1rem); /* Ajusta el tamaño de los enlaces */
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+}
+@media (max-width: 320px) {
+  header nav {
+    gap: 1rem;
+  }
+  header nav .logo {
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  }
+  header nav .nav-links {
+    gap: 0.5rem;
+  }
+  header nav .nav-links li a {
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
   }
 }
 

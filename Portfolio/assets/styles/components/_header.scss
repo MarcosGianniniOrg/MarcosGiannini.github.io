@@ -1,6 +1,6 @@
+@use "../mixins" as *;
 @use "../variables" as *;
 
-// Header principal con estilos generales
 header {
   background-color: $header-background-color; // Fondo del header
   padding: $header-padding 1rem; // Padding superior e inferior dinámico
@@ -12,37 +12,12 @@ header {
     padding: 0 2rem;              // Añade espacio horizontal en los lados
     gap: $nav-gap; // Espacio entre los elementos
 
-    // Mixin para efectos hover
-    @mixin link-hover-effect($color) {
-      color: white; // Color base inicial
-      position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background-color: $color;
-        transition: width 0.3s ease, left 0.3s ease;
-      }
-
-      &:hover::after {
-        width: 100%;
-        left: 0;
-      }
-
-      &:hover {
-        color: $color;
-      }
-    }
-
     // Logo principal del header
     .logo a {
       @include link-hover-effect($header-link-hover-color);
       font-weight: bold;
       font-size: clamp(1.5rem, 4vw, 2rem);
+      color: $text-light-color; // Color del logo
     }
 
     // Navegación principal
@@ -52,11 +27,13 @@ header {
       margin: 0;
       display: flex;
       gap: $nav-gap; // Espaciado entre enlaces
-    }
 
-    .nav-links li a {
-      @include link-hover-effect($header-link-hover-color);
-      font-size: 1.2rem;
+      li a {
+        @include link-hover-effect($header-link-hover-color);
+        font-size: $nav-link-size;
+        color: $text-light-color; // Color de los enlaces
+        text-decoration: none;
+      }
     }
   }
 }
@@ -64,3 +41,4 @@ header {
 .nav-toggle {
   display: none; // Ocultar el botón hamburguesa en Desktop
 }
+

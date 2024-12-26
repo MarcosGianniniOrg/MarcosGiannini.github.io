@@ -15,6 +15,7 @@ $text-light-color: #fafafa;
 $link-color: #f486ab;
 $link-hover-color: #d14c7d;
 $hero-gradient: linear-gradient(135deg, $secondary-color, $gradient-end-color);
+$header-link-color: #ffffff;
 
 // Fonts
 $font-primary: 'Montserrat', 'Arial', sans-serif;
@@ -33,6 +34,8 @@ $nav-gap: clamp(0.75rem, 2vw, 2rem);
 // Header
 $header-background-color: $primary-color; // Alias descriptivo
 $header-link-hover-color: $link-hover-color; 
+$nav-link-size: clamp(0.9rem, 2vw, 1.2rem);
+
 
 // Hero
 $hero-padding: 2rem;

@@ -1,29 +1,8 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 header {
-  // Reglas comunes que no cambian entre resoluciones
-  padding: $header-padding;
-
-  nav {
-    align-items: center;
-    gap: $nav-gap;
-
-    .logo {
-      font-size: clamp(1.2rem, 4vw, 2rem); // Tamaño dinámico para logo en todas las resoluciones
-    }
-
-    .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      li a {
-        font-size: clamp(1rem, 3vw, 1.2rem); // Tamaño dinámico de los enlaces
-      }
-    }
-  }
-
-  // Modificaciones específicas para 1024px
+  // Media queries para 1024px
   @media (max-width: 1024px) {
     nav {
       flex-direction: row; // Mantener elementos en fila
@@ -31,28 +10,75 @@ header {
     }
   }
 
-  // Modificaciones específicas para 768px
+  // Media queries para 768px
   @media (max-width: 768px) {
+    header {
+      nav {
+        flex-direction: row; /* Mantén en fila horizontal */
+        justify-content: space-between; /* Espaciado entre logo y menú */
+        align-items: center; /* Centra verticalmente */
+        gap: $nav-gap; /* Mantén un espaciado equilibrado */
+  
+        .logo {
+          font-size: clamp(1.2rem, 2.8vw, 1.5rem); /* Tamaño ligeramente mayor */
+        }
+  
+        .nav-links {
+          flex-direction: row; /* Mantén los enlaces en fila */
+          gap: 1.5rem; /* Ajusta el espaciado entre enlaces */
+  
+          li a {
+            font-size: clamp(1rem, 2.2vw, 1.2rem); /* Tamaño consistente */
+          }
+        }
+      }
+    }
+  }
+
+  // Media queries para 480px
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+
     nav {
-      flex-direction: column; /* Asegura el cambio a columna */
-      align-items: center; /* Centra contenido */
-      gap: 1rem; /* Ajusta el espaciado */
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
 
       .logo {
-        font-size: clamp(1rem, 2.5vw, 1.3rem); /* Reduce ligeramente el tamaño del logo */
+        font-size: clamp(1rem, 2vw, 1.3rem);
       }
 
       .nav-links {
-        flex-direction: column; /* Alinea enlaces en columna */
-        gap: 0.5rem; /* Espaciado más compacto */
+        flex-direction: column;
+        gap: 0.75rem;
 
         li a {
-          font-size: clamp(0.9rem, 2vw, 1rem); /* Ajusta el tamaño de los enlaces */
+          font-size: clamp(0.8rem, 2vw, 1rem);
+        }
+      }
+    }
+  }
+
+  // Media queries para 320px
+  @media (max-width: 320px) {
+    nav {
+      gap: 1rem;
+
+      .logo {
+        font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+      }
+
+      .nav-links {
+        gap: 0.5rem;
+
+        li a {
+          font-size: clamp(0.7rem, 1.8vw, 0.9rem);
         }
       }
     }
   }
 }
+
 
 #hero-section {
   @media (max-width: 1024px) {
@@ -82,6 +108,7 @@ header {
       }
     }
   }
+
 }
 
 #projects {
