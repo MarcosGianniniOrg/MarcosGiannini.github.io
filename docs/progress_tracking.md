@@ -86,17 +86,17 @@ Este documento te ayudará a mantener un control claro de tus avances, identific
 |----------------------|------------------------------------|--------------|-------------------------------------|
 | Sesión 1             | Introducción teórica JS           | ✅ Completado |                                   |
 | Sesión 1             | Tipos de datos y operadores       | ✅ Completado |                                   |
-| Sesión 2             | Bucles y operador Comma           | ✅ Completado |                                   |
-| Sesión 2             | Objetos y Arrays                  | ✅ Completado |                                   |
-| Sesión 2             | Funciones                         | ✅ Completado |                                   |
-| Sesión 3             | Funciones avanzadas               | ✅ Completado |                                   |
-| Sesión 3             | Optional Chaining                 | ✅ Completado |                                   |
-| Sesión 3             | Nullish Coalescing                | ✅ Completado |                                   |
-| Sesión 3             | Destructuring                    | ✅ Completado |                                   |
-| Sesión 4             | Operadores Rest/Spread            | ✅ Completado |                                   |
-| Sesión 4             | Default Arguments                 | ✅ Completado |                                   |
-| Sesión 4             | Clases en JavaScript              | ✅ Completado |                                   |
-| Sesión 5             | Clases en profundidad             | ✅ Pendiente  |                                   |
+| Sesión 2             | Bucles y operador Comma           | ❌ Pendiente |                                   |
+| Sesión 2             | Objetos y Arrays                  | ❌ Pendiente |                                   |
+| Sesión 2             | Funciones                         | ❌ Pendiente |                                   |
+| Sesión 3             | Funciones avanzadas               | ❌ Pendiente |                                   |
+| Sesión 3             | Optional Chaining                 | ❌ Pendiente |                                   |
+| Sesión 3             | Nullish Coalescing                | ❌ Pendiente |                                   |
+| Sesión 3             | Destructuring                    | ❌ Pendiente |                                   |
+| Sesión 4             | Operadores Rest/Spread            | ❌ Pendiente |                                   |
+| Sesión 4             | Default Arguments                 | ❌ Pendiente |                                   |
+| Sesión 4             | Clases en JavaScript              | ❌ Pendiente |                                   |
+| Sesión 5             | Clases en profundidad             | ❌ Pendiente  |                                   |
 | Sesión 5             | Notación JSON                     | ❌ Pendiente  |                                   |
 | Sesión 5             | Manejo de errores                 | ❌ Pendiente  |                                   |
 | Sesión 5             | Módulos ES (ESModules)            | ❌ Pendiente  |                                   |
