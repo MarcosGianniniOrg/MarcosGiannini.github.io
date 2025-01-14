@@ -96,7 +96,7 @@ Este documento te ayudará a mantener un control claro de tus avances, identific
 | Sesión 4             | Operadores Rest/Spread            | ✅ Completado |                                   |
 | Sesión 4             | Default Arguments                 | ✅ Completado |                                   |
 | Sesión 4             | Clases en JavaScript              | ✅ Completado |                                   |
-| Sesión 5             | Clases en profundidad             | ❌ Pendiente  |                                   |
+| Sesión 5             | Clases en profundidad             | ✅ Pendiente  |                                   |
 | Sesión 5             | Notación JSON                     | ❌ Pendiente  |                                   |
 | Sesión 5             | Manejo de errores                 | ❌ Pendiente  |                                   |
 | Sesión 5             | Módulos ES (ESModules)            | ❌ Pendiente  |                                   |
