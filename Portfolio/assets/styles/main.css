@@ -176,7 +176,7 @@ header nav .nav-links li a:hover {
   transition: background-color 0.3s;
 }
 #projects .project-card .project-links a .project-links a:hover {
-  background-color: rgb(238.39, 120.61, 161.38); /* Usamos la variable ya definida */
+  background-color: #ee79a1; /* Usamos la variable ya definida */
 }
 #projects .filter-container {
   display: flex;
@@ -203,7 +203,7 @@ header nav .nav-links li a:hover {
 #projects .filter-container .filter-btn.active {
   background-color: #f4a6c1; /* Fondo activo */
   color: #fafafa; /* Texto blanco */
-  border-color: rgb(238.39, 120.61, 161.38); /* Usamos la variable existente */
+  border-color: #ee79a1; /* Usamos la variable existente */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
@@ -231,7 +231,8 @@ header nav .nav-links li a:hover {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease-in-out;
 }
@@ -422,7 +423,7 @@ header nav .nav-links li a:hover {
 
 /* Media Queries */
 #footer {
-  background: linear-gradient(135deg, #f4a6c1, rgb(249.61, 211.39, 224.62));
+  background: linear-gradient(135deg, #f4a6c1, #fad3e1);
   color: white;
   padding: 2rem 0;
   text-align: center;
@@ -438,7 +439,7 @@ header nav .nav-links li a:hover {
   font-size: clamp(0.8rem, 2.5vw, 1rem);
   margin-bottom: 1.5rem;
   font-weight: 600;
-  color: rgb(229.5, 229.5, 229.5);
+  color: #e6e6e6;
 }
 #footer .footer-content .footer-links {
   list-style: none;
@@ -622,7 +623,7 @@ header nav .nav-links li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
   }
   #projects .project-card .project-links a:hover {
-    background-color: rgb(238.39, 120.61, 161.38); /* Usamos la variable para hover */
+    background-color: #ee79a1; /* Usamos la variable para hover */
     transform: scale(1.02); /* Pequeño zoom en hover */
   }
 }
@@ -640,6 +641,4 @@ h1, h2, h3 {
 
 a {
   text-decoration: none;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
